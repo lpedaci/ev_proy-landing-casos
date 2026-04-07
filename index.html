@@ -40,18 +40,15 @@ body::before{
 }
 
 /* ── NAV ── */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  background:rgba(245,242,237,.92);backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--border);padding:0 2rem;
-}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,58,92,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 2rem;}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
-.nav-logo{font-weight:800;font-size:13px;letter-spacing:.02em;color:var(--ink);}
-.nav-logo span{color:var(--accent);}
+.nav-logo{font-family:'DM Sans',sans-serif;font-weight:800;font-size:14px;color:var(--bg);letter-spacing:.02em;}
+.nav-logo span{color:#5DCAA5;}
 .nav-links{display:flex;gap:4px;}
-.nav-links a{font-size:12px;font-weight:500;color:var(--ink3);padding:5px 12px;border-radius:20px;transition:all .2s;}
-.nav-links a:hover{background:var(--ink);color:var(--bg);}
-.nav-inst{font-size:11px;color:var(--ink3);letter-spacing:.04em;}
+.nav-links a{font-size:12px;font-weight:500;color:rgba(255,255,255,0.5);text-decoration:none;padding:5px 10px;border-radius:20px;transition:all .2s;white-space:nowrap;}
+.nav-links a:hover,.nav-links a.act{background:rgba(255,255,255,0.12);color:var(--bg);}
+.nav-burger span{display:block;width:20px;height:2px;background:var(--bg);border-radius:2px;transition:all .3s;}
+.nav-inst{font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:.04em;}
 
 /* ── HERO ── */
 .hero{
@@ -289,7 +286,7 @@ footer{background:var(--ink);color:var(--bg);padding:3rem 2rem;margin-top:4rem;}
       <a href="#casos">Casos de uso</a>
       <a href="#materiales">Materiales</a>
     </div>
-    <div class="nav-inst">Instituto Leonardo Murialdo · 7mo Informática</div>
+    <div class="nav-inst">Prof. Pedaci, Lourdes</div>
   </div>
 </nav>
 
@@ -542,7 +539,7 @@ footer{background:var(--ink);color:var(--bg);padding:3rem 2rem;margin-top:4rem;}
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
       </div>
       <div class="mat-info">
-        <div class="mat-mod" style="color:var(--accent2);">Lineamientos 2026</div>
+        <div class="mat-mod" style="color:var(--accent2);">Lineamientos</div>
         <div class="mat-title">Metodologías y criterios de trabajo</div>
         <div class="mat-desc">
           Lineamientos institucionales del proyecto tecnológico interdisciplinario: 
@@ -618,7 +615,7 @@ footer{background:var(--ink);color:var(--bg);padding:3rem 2rem;margin-top:4rem;}
       <a href="https://drive.google.com/file/d/1ul9F-vKW77T63wKry9XCBVUl9ket7qBd/view" target="_blank" rel="noopener">Módulo 01 — Generalidades</a>
       <a href="https://drive.google.com/file/d/1pR9LyNOrX8V4IBVlAuqHKMiKhZ0QZ2Gv/view" target="_blank" rel="noopener">Módulo 02 — Fases</a>
       <a href="https://drive.google.com/file/d/1N9A3jMoAGUjQSZqKv4pl0DRSGOJ_dyku/view" target="_blank" rel="noopener">Módulo 03 — Documentación</a>
-      <a href="https://drive.google.com/file/d/1wQFX3TDU_nswwqn_srR2zLXDJLCYjLy0/view" target="_blank" rel="noopener">Lineamientos 2026</a>
+      <a href="https://drive.google.com/file/d/1wQFX3TDU_nswwqn_srR2zLXDJLCYjLy0/view" target="_blank" rel="noopener">Lineamientos</a>
     </div>
   </div>
   <div class="footer-bottom">
