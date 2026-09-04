@@ -38,8 +38,10 @@ ev-proy-hub/
 | Tecnología | Uso |
 |---|---|
 | HTML5 semántico | Estructura del documento |
-| CSS3 (custom properties) | Sistema de diseño con tokens, layout Grid/Flex |
-| JavaScript vanilla (ES6+) | Animaciones con `IntersectionObserver` |
+| CSS3 (custom properties) | Sistema de diseño con tokens, layout Grid/Flex, bento sections |
+| `prefers-color-scheme` | Modo claro/oscuro automático según el sistema |
+| JavaScript vanilla (ES6+) | `IntersectionObserver` para scroll-spy de navegación y animaciones de entrada |
+| Accesibilidad | Estados `:focus-visible` y soporte de `prefers-reduced-motion` |
 | Google Fonts — DM Sans | Tipografía principal |
 | GitHub Pages | Hosting estático gratuito |
 
@@ -49,11 +51,12 @@ Sin dependencias externas, sin frameworks, sin bundlers. El sitio funciona desde
 
 ## Secciones del hub
 
-- **Hero** — Presentación del programa y accesos directos
+- **Hero** — Presentación del programa, accesos directos y vista previa de los casos de estudio
 - **Contexto** — Marco institucional y las 6 fases del ciclo de proyecto
 - **Casos de estudio** — Roberto Fernández (Caso 01) y Valeria Gómez (Caso 02)
-- **Recursos** — Acceso a los 3 módulos del programa y los lineamientos de trabajo
-- **Metodología** — Los 6 principios que estructuran el proceso de cada proyecto
+- **Proyectos 2026** — Dashboard en formato bento con los proyectos finalizados del ciclo (todavía sin entregas, estado "Próximamente")
+- **Cómo trabajamos** — Los 6 principios que estructuran el proceso de cada proyecto
+- **Materiales** — Los 3 módulos del programa, el ejemplo de documentación, los lineamientos, el cronograma y las pautas de entrega
 
 ---
 
