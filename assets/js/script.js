@@ -68,7 +68,7 @@ const fadeObserver = new IntersectionObserver(entries => {
   });
 }, { threshold: .1 });
 
-document.querySelectorAll('.caso-card, .mat-card, .metod-card, .cb-stat').forEach(el => {
+document.querySelectorAll('.caso-card, .proy-soon, .proy-ghost, .mat-card, .metod-card, .cb-stat').forEach(el => {
   el.style.opacity   = '0';
   el.style.transform = 'translateY(20px)';
   fadeObserver.observe(el);
