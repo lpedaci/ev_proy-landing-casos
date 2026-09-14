@@ -1,0 +1,58 @@
+[
+  {
+    "id": "crisis",
+    "corta": true,
+    "respuesta": "<p>Paro un segundo con lo de la materia.</p><p>Si estás pasando por algo así, hablalo ahora con alguien. No hace falta que sepas cómo explicarlo ni que estés seguro de nada.</p><ul><li><strong>Línea 135</strong> (gratuita desde CABA y Gran Buenos Aires) o <strong>(011) 5275-1135</strong> desde todo el país. Centro de Asistencia al Suicida, las 24 horas.</li><li><strong>Línea 102</strong>, gratuita y las 24 horas, para chicas y chicos.</li><li><strong>107 (SAME)</strong> o <strong>911</strong> si es una urgencia ahora mismo.</li></ul><p>Y en el instituto: contáselo a la profe, a una preceptora o a cualquier adulto del colegio en quien confíes. Yo soy un programa y no puedo acompañarte en esto. Ellos sí.</p>",
+    "terminos": [
+      "me quiero matar", "quiero matarme", "matarme", "me mato", "me voy a matar",
+      "suicidarme", "suicidio", "suicida", "me suicido", "quiero suicidarme",
+      "me quiero morir", "quiero morirme", "no quiero vivir", "no quiero seguir viviendo",
+      "no quiero estar mas", "quiero desaparecer", "terminar con todo", "acabar con todo",
+      "lastimarme", "me lastimo", "hacerme dano", "hacerme mal", "autolesion", "autolesionarme",
+      "cortarme las venas", "me corto", "cortarme", "tomarme las pastillas",
+      "no aguanto mas vivir", "estoy pensando en matarme", "mejor si no estuviera"
+    ]
+  },
+
+  {
+    "id": "violencia",
+    "corta": true,
+    "respuesta": "<p>Esto se va de lo que puedo responder, y no quiero contestarte cualquier cosa.</p><p>Si alguien te está lastimando, o si sentís que podés lastimar a alguien, hay dónde hablarlo:</p><ul><li><strong>Línea 137</strong>, violencia familiar y sexual, gratuita y las 24 horas.</li><li><strong>Línea 144</strong>, violencia por motivos de género, gratuita y las 24 horas.</li><li><strong>Línea 102</strong>, derechos de chicas y chicos, gratuita y las 24 horas.</li><li><strong>911</strong> si hay riesgo en este momento.</li></ul><p>En el instituto, contáselo a la profe o a cualquier adulto del colegio en quien confíes.</p>",
+    "terminos": [
+      "lo quiero matar", "la quiero matar", "los quiero matar", "voy a matar a",
+      "quiero lastimar a", "voy a lastimar a", "quiero pegarle a", "voy a pegarle a",
+      "me pegan en casa", "me pegan", "me pega mi", "me maltratan", "me maltrata",
+      "abuso sexual", "me abusaron", "abusaron de mi", "me tocaron sin",
+      "violencia en mi casa", "tengo miedo de mi", "me amenazan", "me amenaza",
+      "bullying", "me hacen bullying", "me acosan", "me acosa"
+    ]
+  },
+
+  {
+    "id": "netiqueta",
+    "corta": false,
+    "respuesta": "<p>Che, bajemos un cambio con el vocabulario: acá valen las netiquetas y el código de ética de la cursada.</p><p>Igual te contesto.</p>",
+    "terminos": [
+      "boludo", "boluda", "boludos", "boludas", "boludez", "boludeces",
+      "pelotudo", "pelotuda", "pelotudos", "pelotudas", "pelotudez",
+      "forro", "forra", "forros", "forras",
+      "gil", "giles", "gila", "sorete", "soretes",
+      "pajero", "pajera", "pajeros",
+      "puto", "puta", "putos", "putas", "putazo",
+      "conchudo", "conchuda", "concha",
+      "trolo", "trola", "trolos", "trolas",
+      "tarado", "tarada", "tarados", "taradas",
+      "idiota", "idiotas", "imbecil", "imbeciles",
+      "estupido", "estupida", "estupidos", "estupidas",
+      "mogolico", "mogolica", "retrasado",
+      "cagon", "cagona", "cagones", "baboso", "babosa", "ortiva", "garca", "garcas",
+      "mierda", "mierdas", "carajo", "verga", "pija", "choto", "chota",
+      "la concha de tu madre", "la concha de tu hermana", "la concha de la lora",
+      "hijo de puta", "hija de puta", "hijos de puta", "hdp",
+      "la puta que te pario", "la puta madre", "la re puta madre",
+      "andate a la mierda", "ande a la mierda", "vayanse a la mierda",
+      "chupame un huevo", "chupame la pija", "me chupa un huevo", "me chupa tres pelotas",
+      "que te jodan", "jodete", "muerete", "morite"
+    ]
+  }
+]

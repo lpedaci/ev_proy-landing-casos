@@ -1,0 +1,285 @@
+[
+  {
+    "id": "quien-es-hopper",
+    "pregunta": "¿Por qué te llamás Hopper?",
+    "respuesta": "<p>Por <strong>Grace Hopper</strong> (1906-1992), que insistió en que un programa tiene que poder ser leído por alguien que no lo escribió: de ahí salieron los lenguajes cercanos al humano y el compilador. También es la que dejó pegada una polilla en el cuaderno de bitácora, el registro de fallas más famoso de la computación.</p><p>El equipo eligió ese nombre porque documentar es escribir para que otro entienda, que es de lo que trata esta materia.</p><p>Soy un asistente automático: respondo lo que está cargado en el sitio y en los materiales. No reemplazo a la profe.</p>",
+    "keywords": ["hopper", "tu nombre", "por que te llamas", "como te llamas", "grace hopper", "quien sos", "quien eres", "grace", "de donde viene tu nombre", "por que hopper", "sos un bot", "sos una ia", "chatbot"],
+    "publico": "ambos",
+    "link": "",
+    "destacada": false,
+    "fuente": "Identidad del asistente (definida por el equipo de la materia)."
+  },
+
+  {
+    "id": "que-es-la-materia",
+    "pregunta": "¿Qué es Evaluación de Proyectos?",
+    "respuesta": "<p>Es el espacio curricular de <strong>7mo año de la Tecnicatura en Informática Personal y Profesional</strong> del Instituto Leonardo Murialdo, y forma parte del Proyecto Tecnológico Interdisciplinario articulado con las demás modalidades del año.</p><p>Se trata de transformar un problema detectado en un cliente real en un sistema tecnológico funcional, viable y presentable. No se trabaja sobre supuestos: el punto de partida es siempre un usuario concreto con una necesidad concreta.</p><p>Integra análisis de requerimientos, fases del proyecto, estudio de viabilidad, diseño UX/HCI, OKRs y planificación económica.</p>",
+    "keywords": ["que es evaluacion de proyectos", "de que trata la materia", "que es la materia", "de que se trata", "que es esta materia", "de que va", "materia", "asignatura", "espacio curricular", "evaluacion de proyectos", "que se ve", "contenido de la materia", "que aprenden", "de que trata"],
+    "publico": "ambos",
+    "link": "#contexto",
+    "destacada": true,
+    "fuente": "Sitio del hub (sección Contexto) · Lineamientos y Metodologías 2026, punto 0."
+  },
+  {
+    "id": "metodologia-e01-e06",
+    "pregunta": "¿Qué es la metodología E01 a E06?",
+    "respuesta": "<p>Son las <strong>seis etapas</strong> por las que pasa todo proyecto de la materia, en orden:</p><ul><li><strong>E01</strong> · Identificación y validación de un problema real</li><li><strong>E02</strong> · Análisis de factibilidad técnica, económica y de gestión</li><li><strong>E03</strong> · Diseño del sistema y definición de requerimientos</li><li><strong>E04</strong> · Prototipado (mockups y 3D) y pruebas de usuario</li><li><strong>E05</strong> · Desarrollo y documentación técnica, operativa y económica</li><li><strong>E06</strong> · Presentación profesional, defensa y pitch de negocio</li></ul><p>Las etapas son acumulativas: cada una usa lo que produjo la anterior. Si E01 define mal el problema, todo lo que sigue resuelve el problema equivocado.</p>",
+    "keywords": ["metodologia", "e01 e06", "las 6 etapas", "seis etapas", "las etapas", "cuales son las etapas", "fases del proyecto", "las 6 fases", "seis fases", "cuales son las fases", "etapas del proyecto", "e01 a e06", "ciclo del proyecto", "como se organiza el proyecto", "metodologia de la materia"],
+    "publico": "ambos",
+    "link": "#contexto",
+    "destacada": true,
+    "fuente": "Lineamientos y Metodologías 2026, punto 3 (Etapas del Proyecto) · Sitio del hub, sección Contexto."
+  },
+  {
+    "id": "por-que-dos-casos",
+    "pregunta": "¿Por qué hay dos casos de estudio?",
+    "respuesta": "<p>Porque la misma metodología tiene que funcionar en proyectos de naturaleza distinta, y verla aplicada dos veces es lo que muestra que el método no depende del tema.</p><ul><li><strong>Roberto (Ferretería El Tornillo)</strong> es un proyecto de software de gestión para un comercio de barrio.</li><li><strong>Valeria (SensorOffice)</strong> es un proyecto de hardware más software: una red de sensores con dashboard web.</li></ul><p>Los dos parten de un usuario real entrevistado, separan síntomas de causas raíz y recorren las mismas etapas E01 a E06. Cambia el producto, no el recorrido.</p><p>Los casos son ficticios y se desarrollaron como modelos de referencia. Su uso es exclusivamente formativo.</p>",
+    "keywords": ["por que hay dos casos", "dos casos", "cuantos casos", "para que sirven los casos", "por que dos", "casos de estudio", "casos de uso", "roberto y valeria", "diferencia entre los casos", "que casos hay"],
+    "publico": "ambos",
+    "link": "#casos",
+    "destacada": true,
+    "fuente": "Sitio del hub (sección Casos de estudio) · README del repositorio."
+  },
+  {
+    "id": "caso-roberto",
+    "pregunta": "¿De qué trata el caso de Roberto?",
+    "respuesta": "<p><strong>Roberto Fernández</strong>, 58 años, dueño de la <strong>Ferretería El Tornillo</strong> (Villa Bosch, Tres de Febrero). Lleva 22 años al frente del local, de 80 m², con un solo empleado.</p><p>Trabaja con un Excel desactualizado y papel. Pierde ventas por falta de stock y compra de más por no tener historial.</p><p>El equipo detectó tres síntomas y los rastreó hasta sus causas reales. Por ejemplo: el síntoma es que a veces no tiene lo que el cliente pide; la causa real es que no hay actualización automática de stock por venta ni señal de reposición anticipada. La solución ataca la causa, no el síntoma.</p>",
+    "keywords": ["caso roberto", "roberto", "roberto fernandez", "ferreteria", "el tornillo", "caso 01", "caso 1", "primer caso", "villa bosch", "gestion de stock", "stock", "de que trata el caso de roberto", "caso de la ferreteria"],
+    "publico": "ambos",
+    "link": "https://lpedaci.github.io/ev_proy-modulo02-caso01/",
+    "destacada": true,
+    "fuente": "Caso 01 publicado (ev_proy-modulo02-caso01) · Sitio del hub, sección Casos de estudio."
+  },
+  {
+    "id": "caso-valeria",
+    "pregunta": "¿De qué trata el caso de Valeria?",
+    "respuesta": "<p><strong>Valeria Gómez</strong>, socia administradora del <strong>Estudio Contable Gómez</strong> (Caseros, Tres de Febrero): 3 oficinas, 8 empleados y 2 socios.</p><p>La factura de luz subió porque los splits funcionan sin nadie en el ambiente, la oficina del fondo siempre huele a cerrado y nadie mide CO₂ ni humedad. Decisiones sin datos.</p><p>El equipo diseñó <strong>SensorOffice</strong>: una red de nodos ESP32 con sensores de temperatura, humedad, calidad del aire, luminosidad, presencia y consumo, con dashboard web, alertas por umbral y control remoto de los splits vía enchufes SmartThings.</p><p>Es el caso que además tiene la carpeta de documentación completa publicada.</p>",
+    "keywords": ["caso valeria", "valeria", "valeria gomez", "sensoroffice", "sensor office", "caso 02", "caso 2", "segundo caso", "estudio contable", "caseros", "monitoreo ambiental", "sensores", "esp32", "de que trata el caso de valeria", "caso del estudio contable"],
+    "publico": "ambos",
+    "link": "https://lpedaci.github.io/ev_proy-modulo02-caso02/",
+    "destacada": true,
+    "fuente": "Caso 02 publicado (ev_proy-modulo02-caso02) · Documentación SensorOffice (ev_proy-modulo03-documentacion)."
+  },
+  {
+    "id": "quien-dicta",
+    "pregunta": "¿Quién dicta la materia?",
+    "respuesta": "<p><strong>Prof. Pedaci, Lourdes</strong>, en el Instituto Leonardo Murialdo (Tres de Febrero, Buenos Aires), para 7mo año de la Tecnicatura en Informática Personal y Profesional, ciclo lectivo 2026.</p><p>Todo el material del sitio y los dos casos de estudio son de su autoría.</p>",
+    "keywords": ["quien dicta", "quien da la materia", "quien es la profe", "profesora", "profesor", "docente", "quien la da", "profe", "lourdes", "pedaci", "quien enseña", "a cargo de la materia", "quien dicta la materia"],
+    "publico": "ambos",
+    "link": "https://www.linkedin.com/in/lourdes-pedaci/",
+    "destacada": true,
+    "fuente": "Sitio del hub (hero y pie) · README del repositorio."
+  },
+  {
+    "id": "usuario-real",
+    "pregunta": "¿Por qué el proyecto tiene que partir de un usuario real?",
+    "respuesta": "<p>Porque es el punto de partida obligatorio: un problema real validado con un usuario o cliente concreto. <strong>No se admiten proyectos hipotéticos</strong>, y tampoco problemáticas internas de la institución educativa: la solución tiene que dirigirse al mercado o a una organización externa.</p><p>Antes de escribir una sola línea de código, el equipo hace un relevamiento con entrevistas estructuradas para diagnosticar la situación actual. Ahí se demuestra que se diferenciaron las <strong>causas</strong> del problema de los simples <strong>síntomas</strong>.</p><p>El usuario es citado físicamente en etapas definidas para dar su devolución sobre el avance.</p>",
+    "keywords": ["usuario real", "cliente real", "por que un usuario real", "puedo inventar el cliente", "cliente inventado", "proyecto hipotetico", "sintomas y causas", "sintoma", "causa raiz", "entrevista estructurada", "relevamiento", "puede ser del colegio", "problema del instituto", "a quien entrevisto"],
+    "publico": "ambos",
+    "link": "#metodologia",
+    "destacada": false,
+    "fuente": "Lineamientos y Metodologías 2026, puntos 0 y 1."
+  },
+
+  {
+    "id": "etapa-e01",
+    "pregunta": "¿Qué es la etapa E01?",
+    "respuesta": "<p><strong>E01 · Identificación y validación de un problema real</strong> mediante investigación de campo.</p><p>Se elige un usuario o cliente concreto, se lo entrevista con una guía estructurada y se diagnostica la situación actual. El entregable es el diagnóstico: los síntomas que el cliente menciona, las causas reales detrás de ellos y la línea de base (los números del antes, que después sirven para el benchmarking).</p><p>Sin esta etapa cerrada no arranca nada: definición incorrecta, solución incorrecta.</p>",
+    "keywords": ["e01", "etapa 1", "etapa uno", "primera etapa", "fase 1", "primera fase", "validacion del problema", "que es e01", "que se hace en e01", "que va en e01", "diagnostico"],
+    "publico": "estudiante",
+    "link": "#contexto",
+    "destacada": false,
+    "fuente": "Lineamientos y Metodologías 2026, punto 3 · Sitio del hub, Las 6 fases del proyecto."
+  },
+  {
+    "id": "etapa-e02",
+    "pregunta": "¿Qué es la etapa E02?",
+    "respuesta": "<p><strong>E02 · Análisis de factibilidad técnica, económica y de gestión.</strong></p><p>Antes de diseñar se analiza si el proyecto es realizable (técnica), organizable (gestión) y sostenible (económica). Acá entra el <strong>benchmarking</strong>: comparar contra la línea de base relevada en E01 y contra lo que ya existe en el mercado, para determinar si la solución es competitiva.</p><p>Si la factibilidad no cierra, el alcance se recorta acá y no tres meses después.</p>",
+    "keywords": ["e02", "etapa 2", "etapa dos", "segunda etapa", "fase 2", "segunda fase", "factibilidad", "viabilidad", "benchmarking", "que es e02", "que se hace en e02", "estudio de factibilidad"],
+    "publico": "estudiante",
+    "link": "#contexto",
+    "destacada": false,
+    "fuente": "Lineamientos y Metodologías 2026, punto 3 · Módulo 02 (Fases de un Proyecto) · Sitio del hub."
+  },
+  {
+    "id": "etapa-e03",
+    "pregunta": "¿Qué es la etapa E03?",
+    "respuesta": "<p><strong>E03 · Diseño del sistema y definición de requerimientos.</strong></p><p>Se traduce el diagnóstico en especificación: requerimientos funcionales (RF) y no funcionales (RNF), perfiles de usuario (administrador, operario, cliente final) con sus conocimientos técnicos previos, restricciones y suposiciones.</p><p>Acá también se definen los <strong>OKRs</strong>: un objetivo cualitativo y sus resultados clave medibles contra la línea de base.</p>",
+    "keywords": ["e03", "etapa 3", "etapa tres", "tercera etapa", "fase 3", "tercera fase", "diseño del sistema", "requerimientos", "perfiles de usuario", "que es e03", "que se hace en e03"],
+    "publico": "estudiante",
+    "link": "#contexto",
+    "destacada": false,
+    "fuente": "Lineamientos y Metodologías 2026, puntos 2, 3 y 4 · Sitio del hub, Las 6 fases del proyecto."
+  },
+  {
+    "id": "etapa-e04",
+    "pregunta": "¿Qué es la etapa E04?",
+    "respuesta": "<p><strong>E04 · Prototipado (mockups y 3D) y pruebas de usuario.</strong></p><p>Es obligatorio presentar un <strong>mockup interactivo</strong> y validarlo con el usuario final antes de la fase de programación. El feedback se registra como hito de mejora en el control de cambios.</p><p>La interfaz no se diseña por estética sino por usabilidad (HCI), según la experiencia previa y la formación del usuario real. Accesibilidad, fuentes y contraste son requisitos no negociables.</p><p>En proyectos con hardware, acá va también el diseño 3D del producto antes de fabricarlo.</p>",
+    "keywords": ["e04", "etapa 4", "etapa cuatro", "cuarta etapa", "fase 4", "cuarta fase", "prototipado", "prototipo", "hci", "diseño 3d", "pruebas de usuario", "que es e04", "que se hace en e04"],
+    "publico": "estudiante",
+    "link": "#contexto",
+    "destacada": false,
+    "fuente": "Lineamientos y Metodologías 2026, puntos 2 y 3 · Sitio del hub, Las 6 fases del proyecto."
+  },
+  {
+    "id": "etapa-e05",
+    "pregunta": "¿Qué es la etapa E05?",
+    "respuesta": "<p><strong>E05 · Desarrollo y documentación técnica, operativa y económica.</strong></p><p>Se implementa lo que el mockup ya validó, con el repositorio de GitHub como centro del trabajo y todos los integrantes figurando como contributors. En paralelo se completa la carpeta de proyecto: GANTT, oferta económica, estimación y contrato.</p><p>El producto tiene que quedar publicado en un servidor real, no en localhost.</p>",
+    "keywords": ["e05", "etapa 5", "etapa cinco", "quinta etapa", "fase 5", "quinta fase", "desarrollo", "programacion", "que es e05", "que se hace en e05", "implementacion"],
+    "publico": "estudiante",
+    "link": "#contexto",
+    "destacada": false,
+    "fuente": "Lineamientos y Metodologías 2026, puntos 3 y 6 · Sitio del hub, Las 6 fases del proyecto."
+  },
+  {
+    "id": "etapa-e06",
+    "pregunta": "¿Qué es la etapa E06?",
+    "respuesta": "<p><strong>E06 · Presentación profesional, defensa y pitch de negocio.</strong></p><p>Es la instancia final: PPT del proyecto con cada instancia parcial demarcada por su portada, defensa oral y entrega de la carpeta de proyecto completa (documentación, gráfica, manual de uso, GitHub y website).</p><p>No es solo mostrar que funciona: hay que sostener por qué se tomó cada decisión, con el diagnóstico de E01 como respaldo.</p>",
+    "keywords": ["e06", "etapa 6", "etapa seis", "ultima etapa", "fase 6", "sexta etapa", "sexta fase", "presentacion final", "defensa", "pitch", "exposicion", "que es e06", "que se hace en e06"],
+    "publico": "estudiante",
+    "link": "#contexto",
+    "destacada": false,
+    "fuente": "Lineamientos y Metodologías 2026, punto 3 · Sitio del hub, Las 6 fases del proyecto."
+  },
+
+  {
+    "id": "indice-base",
+    "pregunta": "¿Cuáles son las 8 secciones del índice base?",
+    "respuesta": "<p>El índice base de la Carpeta del Proyecto tiene <strong>8 secciones</strong>, agrupadas en tres bloques:</p><ul><li><strong>1 · Control de Cambios</strong></li><li><strong>2 · Introducción</strong> (propósito, alcance, personal involucrado, definiciones y acrónimos, referencias en APA 7, resumen ejecutivo)</li><li><strong>3 · Descripción General</strong> (perspectiva, funcionalidad, características de los usuarios, restricciones, suposiciones y dependencias, evolución previsible)</li><li><strong>4 · Requisitos Específicos</strong> (requerimientos funcionales e interfaces de usuario, hardware, software y comunicación)</li><li><strong>5 · Oferta de Gestión</strong> (GANTT e infraestructura administrativa)</li><li><strong>6 · Oferta Económica</strong> (proveedores)</li><li><strong>7 · Estimación Económica</strong></li><li><strong>8 · Contrato</strong></li></ul><p>Primera sección: 1 y 2. Segunda sección: 3. Tercera sección: 4 a 8.</p>",
+    "keywords": ["8 secciones", "ocho secciones", "cuantas secciones", "secciones del indice", "indice base", "indice de la documentacion", "estructura de la carpeta", "que secciones lleva", "como se organiza la documentacion", "indice", "seciones", "que lleva la carpeta", "organizacion de la documentacion", "cuantas partes"],
+    "publico": "estudiante",
+    "link": "https://lpedaci.github.io/ev_proy-modulo03-documentacion/",
+    "destacada": true,
+    "fuente": "Módulo de Documentación (Organización de la Documentación del Proyecto, índice BASE)."
+  },
+  {
+    "id": "estandar-extendido",
+    "pregunta": "¿Qué es el estándar extendido y cuándo aplica?",
+    "respuesta": "<p>El índice base son las 8 secciones del Módulo de Documentación. El <strong>estándar extendido</strong> es la versión ampliada que usa el ejemplo de SensorOffice, con 12 secciones: suma un <strong>Diagnóstico (árbol de problemas y soluciones)</strong> como sección 2, el <strong>modelo entidad-relación</strong> y el <strong>diagrama de flujo</strong> dentro de Requisitos Específicos, y al final <strong>Bitácora del Proyecto</strong>, <strong>Guía de Inicio Rápido</strong> y <strong>Preguntas Frecuentes</strong>.</p><p>Aplica cuando el proyecto lo pide. Los Lineamientos 2026 ya exigen manual de usuario y quick start guide dentro de la carpeta, así que esas secciones no son decoración. El árbol de problemas conviene cuando el diagnóstico es la pieza que justifica las decisiones de diseño, y el MER y el diagrama de flujo, cuando hay base de datos y lógica de proceso que explicar.</p><p>La regla que sigue el ejemplo es simétrica: <strong>el apartado que no corresponde a tu proyecto se retira y se aclara el motivo</strong>. Ni se infla ni se recorta en silencio.</p>",
+    "keywords": ["estandar extendido", "extendido", "12 secciones", "doce secciones", "indice extendido", "estandar ampliado", "version extendida", "cuando aplica el extendido", "diferencia entre base y extendido", "arbol de problemas", "bitacora", "guia de inicio rapido", "quick start", "mer", "modelo entidad relacion"],
+    "publico": "estudiante",
+    "link": "https://lpedaci.github.io/ev_proy-modulo03-documentacion/",
+    "destacada": false,
+    "fuente": "Documentación SensorOffice (índice completo y nota 'Sobre este documento') · Módulo de Documentación (índice base) · Lineamientos 2026, punto 6."
+  },
+  {
+    "id": "siglas",
+    "pregunta": "¿Qué significan RF, RNF, RHW, ISW y LIM?",
+    "respuesta": "<ul><li><strong>RF</strong> · Requerimiento Funcional: lo que el sistema hace.</li><li><strong>RNF</strong> · Requerimiento No Funcional: cómo se comporta (rendimiento, usabilidad, protocolos, datos).</li><li><strong>RHW</strong> · Requerimiento de Hardware: lo que condiciona el diseño físico y la instalación (tamaño, alimentación, ubicación, infraestructura previa).</li><li><strong>ISW</strong> · Interfaz de Software: cada componente de software del sistema y su rol (firmware, broker, backend, base de datos, frontend, integraciones).</li><li><strong>LIM</strong> · Limitación del alcance: lo que el sistema <strong>no</strong> hace en esta entrega, con el motivo y si está previsto para una versión futura.</li></ul><p>Los IDs se numeran (RF01, RNF02, LIM03) porque después se los cita: una limitación se defiende nombrándola, no escondiéndola.</p>",
+    "keywords": ["rnf", "rhw", "isw", "lim", "rf", "siglas", "acronimos", "que significa rnf", "que significa rhw", "que significa isw", "que significa lim", "que quiere decir rnf", "abreviaturas", "requerimiento no funcional", "requerimiento de hardware", "interfaz de software", "limitacion del alcance", "limitaciones", "glosario", "rnf01", "rhw01", "isw01", "lim01"],
+    "publico": "estudiante",
+    "link": "https://lpedaci.github.io/ev_proy-modulo03-documentacion/",
+    "destacada": true,
+    "fuente": "Documentación SensorOffice, 3.4 Definiciones y acrónimos, 5.1, 5.3, 5.4 y Limitaciones del alcance."
+  },
+  {
+    "id": "rf-vs-rnf",
+    "pregunta": "¿Cuál es la diferencia entre requisito funcional y no funcional?",
+    "respuesta": "<p>El <strong>RF</strong> define qué hace el sistema: una acción concreta que el usuario puede pedirle. El <strong>RNF</strong> define cómo se comporta mientras la hace: calidad, rendimiento, usabilidad, protocolos.</p><p>Ejemplos de SensorOffice:</p><ul><li><strong>RF03</strong>: el sistema envía una alerta cuando una variable supera su umbral. (Funcionalidad.)</li><li><strong>RNF02</strong>: entre la lectura y la visualización pasan menos de 5 segundos. (Rendimiento.)</li><li><strong>RNF03</strong>: se accede desde PC y celular sin instalar ninguna app. (Usabilidad.)</li><li><strong>RNF04</strong>: la interfaz no usa jerga técnica. (Usabilidad / HCI.)</li></ul><p>Prueba rápida: si sacás el requisito y el sistema deja de poder hacer algo, es un RF. Si sigue haciéndolo pero peor (más lento, más confuso, menos confiable), es un RNF.</p><p>Ojo con una confusión habitual: la <strong>ISW</strong> no es un RNF. La ISW describe los componentes de software y cómo se comunican; el RNF describe rendimiento y protocolos.</p>",
+    "keywords": ["diferencia entre rf y rnf", "requisito funcional y no funcional", "requerimiento funcional y no funcional", "funcional vs no funcional", "diferencia rf rnf", "como distingo rf de rnf", "cuando es rf y cuando rnf", "ejemplos de rnf", "ejemplos de rf", "no funcional", "requisito funcional", "requerimiento funcional"],
+    "publico": "estudiante",
+    "link": "https://lpedaci.github.io/ev_proy-modulo03-documentacion/",
+    "destacada": true,
+    "fuente": "Documentación SensorOffice, 5.1 y 5.4 · Módulo 02 (Requerimientos funcionales y Análisis de Interfaces)."
+  },
+  {
+    "id": "product-backlog",
+    "pregunta": "¿Qué es el Product Backlog?",
+    "respuesta": "<p>En Scrum, el <strong>Product Backlog</strong> es la lista de todas las historias de usuario del producto, ordenada por prioridad. El Product Owner las redacta, las sitúa ahí y ordena la lista.</p><p>En la reunión de planificación, el equipo toma del Product Backlog las historias que va a tratar en el Sprint: eso forma el <strong>Sprint Backlog</strong>, que el equipo de desarrollo descompone en tareas. El Sprint corre 2, 3 o 4 semanas, con una reunión diaria, y cierra con la demo de la revisión y la retrospectiva.</p><p>La idea que importa para el proyecto: el backlog es una sola lista priorizada y viva, no un listado de deseos suelto. Lo que no entra en este Sprint queda ahí, ordenado, para el siguiente.</p>",
+    "keywords": ["product backlog", "backlog", "sprint backlog", "scrum", "user stories", "historias de usuario", "sprint", "agil", "metodologia agil", "product owner", "que es el backlog", "retrospectiva", "daily"],
+    "publico": "estudiante",
+    "link": "",
+    "destacada": false,
+    "fuente": "Material de la materia sobre desarrollo de sistemas y metodologías ágiles (ciclo de vida de Scrum)."
+  },
+  {
+    "id": "lineamientos-futuros",
+    "pregunta": "¿Qué va en los Lineamientos Futuros?",
+    "respuesta": "<p>Es lo que la carpeta llama <strong>Evolución previsible del sistema</strong> (punto 3.6 del índice base, 4.6 en el ejemplo de SensorOffice): los cambios, mejoras o expansiones futuras, o sea cómo se espera que el sistema crezca o se adapte a nuevas necesidades con el tiempo.</p><p>Va acá:</p><ul><li>Cada <strong>limitación del alcance (LIM)</strong> que sí tiene sentido resolver más adelante, con la versión en la que entraría. En SensorOffice, LIM04 (no hay app nativa) se declara como v3 en formato PWA.</li><li>Mejoras técnicas identificadas pero fuera del alcance acordado (por ejemplo, cambiar un sensor orientativo por uno de medición certificada).</li></ul><p>No va acá lo que sí entregás en esta versión (eso es Requisitos Específicos), ni lo que decidiste no hacer nunca (eso queda como LIM sin versión futura).</p>",
+    "keywords": ["lineamientos futuros", "evolucion previsible", "versiones futuras", "mejoras futuras", "que va en lineamientos futuros", "a futuro", "proximas versiones", "trabajo futuro", "expansiones futuras", "evolucion del sistema"],
+    "publico": "estudiante",
+    "link": "https://lpedaci.github.io/ev_proy-modulo03-documentacion/",
+    "destacada": false,
+    "fuente": "Módulo de Documentación, 3.6 Evolución previsible del sistema · Módulo 02 (Suposiciones y dependencias / Evolución previsible) · SensorOffice 4.6 y tabla de limitaciones."
+  },
+  {
+    "id": "evaluacion-documentacion",
+    "pregunta": "¿Qué se evalúa de la documentación?",
+    "respuesta": "<p>Lo que los materiales dejan por escrito que la carpeta tiene que poder mostrar:</p><ul><li><strong>Trazabilidad.</strong> Cada pieza se rastrea hasta su origen: RF de prioridad alta, caso de uso, pantalla validada en el mockup, vista codificada, tabla y endpoint, flujo de integración. Si un requerimiento no se puede rastrear hasta algo que dijo el cliente, sobra.</li><li><strong>Control de alcance.</strong> Está definido explícitamente qué hace y qué NO hace el sistema, para evitar expectativas erróneas y problemas legales.</li><li><strong>Control de cambios al día.</strong> Cada validación con el cliente que cambia un requerimiento figura como fila nueva.</li><li><strong>Formato de las tablas.</strong> Los apartados marcados con página del libro Buenas Prácticas (UTN) respetan el formato de tabla de esa fuente.</li><li><strong>Referencias en APA 7ma edición.</strong></li><li><strong>Transparencia en el esfuerzo.</strong> El presupuesto incluye horas hombre, diferenciando categorías profesionales y costo por hora.</li></ul><p>Sobre porcentajes: la única matriz de evaluación publicada es la de la 2da presentación (Frontend 30%, Backend y BD 30%, Integración 40%), y evalúa el avance full stack, no la carpeta. Para la ponderación de la documentación, consultalo en clase.</p>",
+    "keywords": ["que se evalua", "como se evalua la documentacion", "criterios de evaluacion", "que evaluan de la carpeta", "que miran de la documentacion", "rubrica", "grilla", "que se corrige", "trazabilidad", "como se corrige", "puntaje de la documentacion", "matriz de evaluacion", "que se evalua de la documentacion"],
+    "publico": "estudiante",
+    "link": "https://docs.google.com/document/d/1orKODETj6Q1B7qbAWbIYgXlmmxXX1qFfYqrLxmZhojY/edit?usp=sharing",
+    "destacada": true,
+    "fuente": "Pautas de Entrega 2da Presentación (matriz y cadena de trazabilidad) · Lineamientos 2026, punto 5 · Documentación SensorOffice (nota 'Sobre este documento' y 3.5)."
+  },
+  {
+    "id": "formato-entrega",
+    "pregunta": "¿En qué formato se entrega el proyecto?",
+    "respuesta": "<p>La entrega no es un archivo: es la <strong>Carpeta del Proyecto</strong> con cinco piezas.</p><ul><li><strong>Documentación</strong> · fundamentación completa con planificación temporal (GANTT), manual de usuario y quick start guide.</li><li><strong>Presentación</strong> · PPT o Google Slides con cada instancia de presentación demarcada por su portada.</li><li><strong>Gráfica</strong> · banners, logo, diseño 3D orientado a la exposición pública.</li><li><strong>GitHub</strong> · repositorio con el proyecto completo, todos los integrantes como contributors y un README.md con título, descripción, tecnologías, integrantes, link a la web del proyecto y link al manual de uso.</li><li><strong>Website / Landing page</strong> · sitio que resuma descripción del producto, equipo, acceso a la documentación, GitHub y manual.</li></ul><p>Dos condiciones que se rechazan en la entrega: la interfaz web <strong>no se acepta en XAMPP ni en localhost</strong> (tiene que estar publicada en servidor ILM, hosting web, VPS o nube), y la electrónica <strong>no se acepta en protoboard</strong>.</p>",
+    "keywords": ["formato de entrega", "en que formato se entrega", "como se entrega", "que hay que entregar", "que se entrega", "entregables", "pautas de entrega", "carpeta de proyecto", "pdf o word", "requisitos de entrega", "en que formato", "que entregamos", "formato"],
+    "publico": "estudiante",
+    "link": "#materiales",
+    "destacada": true,
+    "fuente": "Módulo de Documentación (Organización de la Carpeta del Proyecto) · Lineamientos 2026, punto 6 y consideraciones de entrega."
+  },
+  {
+    "id": "ejemplo-sensoroffice",
+    "pregunta": "¿Dónde veo un ejemplo de documentación bien hecha?",
+    "respuesta": "<p>En la <strong>carpeta de documentación de SensorOffice</strong> (el caso de Valeria Gómez), publicada completa en la web. Es el caso modelo: sirve de referencia para redactar y organizar la documentación propia.</p><p>Vale la pena mirar cómo resuelve tres cosas que suelen costar: la tabla de limitaciones del alcance (qué NO hace y por qué), la trazabilidad de cada requerimiento hasta el bloque de la entrevista que lo originó, y las preguntas frecuentes con la referencia al RF o al LIM que respalda cada respuesta.</p><p>Está enlazado en Materiales como Módulo 3.1, Ejemplo de documentación.</p>",
+    "keywords": ["ejemplo de documentacion", "documentacion de ejemplo", "ejemplo bien hecho", "modelo de documentacion", "donde veo un ejemplo", "ejemplo de carpeta", "sensoroffice documentacion", "documentacion modelo", "muestra", "como quedaria", "ejemplo", "modulo 3.1", "donde veo un ejemplo de documentacion"],
+    "publico": "estudiante",
+    "link": "https://lpedaci.github.io/ev_proy-modulo03-documentacion/",
+    "destacada": true,
+    "fuente": "Sitio del hub, sección Materiales (Módulo 3.1) · Documentación SensorOffice publicada."
+  },
+  {
+    "id": "proyecto-cambia",
+    "pregunta": "¿Qué pasa si el proyecto cambia a mitad de camino?",
+    "respuesta": "<p>Nada malo, siempre que quede registrado. El cambio se espera; lo que no se acepta es que aparezca sin rastro.</p><ul><li>Se anota como fila nueva en el <strong>Control de Cambios</strong> (sección 1): versión, fecha, responsable y detalle. Cada validación con el cliente que derive en un cambio de requerimiento es un hito del control de cambios.</li><li>Se evalúa el <strong>impacto</strong> en el GANTT y en la oferta económica.</li><li>El contrato ya tiene un apartado para esto: <strong>8.7 Condiciones de modificación</strong>, que define qué ocurre si se solicitan cambios durante el desarrollo.</li></ul><p>Ejemplo del caso de Valeria: en la versión 0.3 se dio de alta el requerimiento del repetidor WiFi (RHW06) al detectar que la red no cubría todos los ambientes, con el impacto evaluado en GANTT y oferta económica.</p><p>Si el cambio mueve el alcance en serio, hablalo primero en clase antes de rehacer la documentación.</p>",
+    "keywords": ["cambia el proyecto", "cambiar el proyecto", "si cambiamos de idea", "cambio de alcance", "control de cambios", "podemos cambiar", "cambiamos a mitad", "modificar el proyecto", "el cliente cambio de idea", "nos equivocamos de proyecto", "replantear", "cambio de requerimiento", "mitad de camino", "condiciones de modificacion", "el proyecto cambia"],
+    "publico": "estudiante",
+    "link": "https://lpedaci.github.io/ev_proy-modulo03-documentacion/",
+    "destacada": false,
+    "fuente": "Módulo de Documentación, 1 Control de Cambios y 8.7 · Lineamientos 2026, punto 5 · SensorOffice, sección 1 (fila 0.3)."
+  },
+  {
+    "id": "okr",
+    "pregunta": "¿Qué es un OKR y cómo se escribe?",
+    "respuesta": "<p><strong>OKR</strong> es Objectives and Key Results.</p><ul><li><strong>Objetivo (O)</strong>: meta cualitativa e inspiradora. Por ejemplo, lograr una interfaz altamente eficiente para el operario.</li><li><strong>Resultados Clave (KR)</strong>: métricas cuantitativas de progreso. Por ejemplo, reducir el tiempo de carga de datos un 60% respecto de la línea de base, obtener una calificación de usabilidad promedio de 4.5/5 en las pruebas de usuario, corregir el 100% de los errores críticos antes del cierre.</li></ul><p>La clave está en la <strong>línea de base</strong>: si en la entrevista relevaste que el proceso actual tarda 45 minutos, ese número es contra el que después comparás. Sin línea de base, un KR no se puede verificar.</p><p>Y si lo que consultás es una opinión o un sentimiento, hay que convertirlo en dato medible: por ejemplo, una escala de Likert del 1 al 5 para la dificultad percibida.</p>",
+    "keywords": ["okr", "okrs", "objectives and key results", "resultados clave", "key results", "como escribo un okr", "objetivos medibles", "linea de base", "escala de likert", "likert", "cuantificar", "metricas", "que es un okr"],
+    "publico": "estudiante",
+    "link": "#metodologia",
+    "destacada": false,
+    "fuente": "Lineamientos y Metodologías 2026, punto 4 (Validación Cuantitativa y OKRs)."
+  },
+  {
+    "id": "mockup-validacion",
+    "pregunta": "¿Cómo se valida el mockup con el cliente?",
+    "respuesta": "<p>Se eligen <strong>3 requerimientos funcionales de prioridad alta</strong> y se traducen a casos de uso, integrados en un único flujo navegable (no tres pantallas sueltas). El formato recomendado es HTML, navegable directamente en el navegador.</p><p>La validación son <strong>dos entrevistas concretadas</strong>:</p><ul><li><strong>1ra</strong>: presentación del mockup inicial y relevamiento de observaciones.</li><li><strong>2da</strong>: presentación de la versión ajustada, mostrando explícitamente qué cambió. Dos entrevistas que muestran lo mismo no agregan valor: la segunda tiene que evidenciar iteración.</li></ul><p>El mockup aprobado funciona después como especificación de las vistas del frontend y orienta las tablas y endpoints del backend.</p><p>Incluye además una pantalla dedicada al <strong>design system</strong>: fondos (claro y oscuro si el cliente lo pide), color de texto, colores de aviso (error, warning, success) con su hex, tamaños de pantalla, formato de menús y logo. Recomendación: evitar #000000 y #FFFFFF puros, y validar contraste según WCAG (el nivel AA exige 4.5:1 en texto normal).</p>",
+    "keywords": ["mockup", "validar el mockup", "casos de uso", "design system", "wcag", "contraste", "dos entrevistas", "validacion con el cliente", "figma", "prototipo navegable", "entrevistas de validacion", "paleta", "colores", "como valido el mockup"],
+    "publico": "estudiante",
+    "link": "https://docs.google.com/document/d/1orKODETj6Q1B7qbAWbIYgXlmmxXX1qFfYqrLxmZhojY/edit?usp=sharing",
+    "destacada": false,
+    "fuente": "Pautas de Entrega 2da Presentación, apartados 5 y 6 · Lineamientos 2026, punto 2."
+  },
+  {
+    "id": "github-publicacion",
+    "pregunta": "¿Cómo tiene que quedar el repositorio y dónde se publica?",
+    "respuesta": "<p><strong>GitHub</strong>: repositorio con el proyecto completo y todos los integrantes figurando como contributors. El README.md tiene que incluir título del proyecto, descripción general, lenguajes y tecnologías utilizadas, integrantes, link a la web del proyecto y link al manual de uso. Si el repositorio se publica como privado, hay que incluir al equipo docente con perfil de colaborador.</p><p><strong>Publicación</strong>: la interfaz web tiene que estar en un servidor real (servidor ILM, hosting web, VPS, AWS, Google Cloud o Azure). Según la solución, no se acepta con XAMPP, y localhost no cuenta como entrega.</p><p><strong>Electrónica</strong>: no se presenta en protoboard, va en la interfaz electrónica adecuada.</p>",
+    "keywords": ["github", "repositorio", "readme", "contributors", "repositorio privado", "donde publico", "publicar el proyecto", "servidor", "hosting", "vps", "aws", "azure", "google cloud", "github pages", "como subo el proyecto", "xampp", "localhost", "protoboard", "donde lo subo"],
+    "publico": "estudiante",
+    "link": "#materiales",
+    "destacada": false,
+    "fuente": "Lineamientos 2026, punto 6 y consideraciones sobre entrega · Módulo de Documentación (GITHUB y Website)."
+  },
+  {
+    "id": "notas-fechas-tramites",
+    "pregunta": "¿Cuándo hay que entregar? ¿Qué nota me pusieron?",
+    "respuesta": "<p>Eso no lo manejo. <strong>Notas, fechas de entrega y trámites</strong> los define la profe, y cualquier cosa que te diga yo sobre eso puede estar desactualizada o directamente mal.</p><p>Consultalo en clase o escribile directo a la profe.</p><p>Lo que sí puedo contarte es qué se entrega, en qué formato y qué se evalúa: preguntame por cualquiera de esas.</p>",
+    "keywords": ["cuando hay que entregar", "fecha de entrega", "para cuando es", "cuando se entrega", "que nota", "mi nota", "cuanto me saque", "aprobe", "desaprobe", "nota final", "fechas", "plazo", "vence", "prorroga", "cuando vence", "cuando es la entrega", "puedo entregar tarde", "recuperatorio", "mesa de examen", "inasistencias", "cuando exponemos", "calificacion", "cuando", "para cuando hay que entregar"],
+    "publico": "estudiante",
+    "link": "",
+    "destacada": false,
+    "fuente": "Política del asistente: notas, fechas y trámites se derivan a la docente."
+  }
+]

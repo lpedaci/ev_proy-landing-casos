@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hopper · prueba de matching</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f2ed; --card: #ffffff; --ink: #0f0f0f; --ink2: #3a3a3a; --ink3: #6b6b6b;
+    --accent: #1a3a5c; --ok: #2d6a4f; --mal: #c45e1a; --border: rgba(15,15,15,.12);
+    --radius: 14px; --rsm: 8px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif; background: var(--bg); color: var(--ink);
+    line-height: 1.6; padding: 40px 20px; font-size: 14px;
+  }
+  main { max-width: 1000px; margin: 0 auto; }
+  h1 { font-size: 22px; font-weight: 600; letter-spacing: -.01em; }
+  h2 { font-size: 15px; font-weight: 500; letter-spacing: .01em; margin: 30px 0 10px; }
+  .intro { margin-top: 8px; color: var(--ink2); font-weight: 400; max-width: 64ch; }
+  .intro code { background: rgba(15,15,15,.06); padding: 1px 5px; border-radius: 4px; font-size: 12.5px; }
+  #resumen {
+    margin: 24px 0; padding: 16px 18px; border: 1px solid var(--border);
+    border-radius: var(--radius); background: var(--card);
+  }
+  #resumen .cifra { font-size: 26px; font-weight: 600; letter-spacing: -.02em; }
+  #resumen .detalle { color: var(--ink2); font-weight: 400; margin-top: 4px; }
+  #resumen.todo-ok .cifra { color: var(--ok); }
+  #resumen.con-fallas .cifra { color: var(--mal); }
+  table { width: 100%; border-collapse: collapse; background: var(--card);
+          border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+  th, td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: .06em;
+       color: var(--ink3); background: rgba(15,15,15,.03); }
+  tr:last-child td { border-bottom: none; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink2); }
+  .marca { font-weight: 500; font-size: 12px; }
+  .marca.si { color: var(--ok); }
+  .marca.no { color: var(--mal); }
+  tr.falla { background: rgba(196,94,26,.07); }
+  .consulta { font-weight: 500; }
+  .id { font-size: 12px; color: var(--ink2); }
+  .tabla-scroll { overflow-x: auto; }
+  .nota { margin-top: 18px; color: var(--ink3); font-size: 12.5px; font-weight: 400; max-width: 70ch; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Hopper · prueba de matching</h1>
+  <p class="intro">
+    Veinte consultas escritas como las escribe un estudiante, más los casos de netiqueta y de
+    señales de crisis. Si cambiaste <code>data/faq.json</code>, <code>data/senales.json</code> o
+    <code>UMBRAL_MINIMO</code>, recargá esta página.
+    La columna <strong>ventaja</strong> es la distancia entre la entrada ganadora y la segunda:
+    si es chica, hay dos entradas peleando la misma consulta.
+  </p>
+
+  <div id="resumen"><span class="cifra">Ejecutando…</span></div>
+
+  <h2>Matching</h2>
+  <div class="tabla-scroll"><table>
+    <thead>
+      <tr>
+        <th></th><th>Consulta</th><th>Público</th><th>Esperado</th><th>Obtenido</th>
+        <th class="num">Puntaje</th><th class="num">Ventaja</th>
+      </tr>
+    </thead>
+    <tbody id="filas"></tbody>
+  </table></div>
+
+  <h2>Señales · netiqueta y centros de ayuda</h2>
+  <p class="intro">
+    Importan las dos direcciones: que salte donde tiene que saltar y, sobre todo, que
+    <strong>no</strong> salte con vocabulario técnico normal. Un falso positivo
+    (marcado <span class="marca no">FALSO</span>) es el error caro.
+  </p>
+  <div class="tabla-scroll"><table>
+    <thead>
+      <tr><th></th><th>Consulta</th><th>Esperado</th><th>Obtenido</th></tr>
+    </thead>
+    <tbody id="filas-senales"></tbody>
+  </table></div>
+
+  <p class="nota">
+    Esta página lee <code>../data/faq.json</code> con <code>fetch</code>, así que necesita estar servida
+    por HTTP (GitHub Pages o un servidor local). Abierta con doble clic no funciona.
+    La misma prueba corre en la terminal con <code>node test/test-matching.js</code>.
+  </p>
+</main>
+
+<script src="../assets/hopper.js" data-auto="no"></script>
+<script src="test-matching.js"></script>
+<script>
+(function () {
+  var resumen = document.getElementById('resumen');
+  var filas = document.getElementById('filas');
+  var filasSenales = document.getElementById('filas-senales');
+
+  function celda(fila, texto, clase) {
+    var td = document.createElement('td');
+    if (clase) td.className = clase;
+    td.textContent = texto;
+    fila.appendChild(td);
+    return td;
+  }
+
+  function pintar(informe, senales) {
+    var fallos = informe.fallos.length + senales.fallos.length;
+    var total = informe.total + senales.total;
+    var ok = informe.aprobados + senales.aprobados;
+
+    resumen.className = fallos ? 'con-fallas' : 'todo-ok';
+    resumen.innerHTML = '';
+    var cifra = document.createElement('p');
+    cifra.className = 'cifra';
+    cifra.textContent = ok + ' / ' + total + ' correctas';
+    var detalle = document.createElement('p');
+    detalle.className = 'detalle';
+    detalle.textContent = 'Umbral actual: ' + informe.umbral.toFixed(2) + '. ' +
+      (fallos
+        ? 'Revisá las filas marcadas: puede faltar una keyword o sobrar una compartida.'
+        : 'Ninguna consulta se fue a la entrada equivocada y ninguna señal saltó de más.');
+    resumen.appendChild(cifra);
+    resumen.appendChild(detalle);
+
+    senales.resultados.forEach(function (r) {
+      var tr = document.createElement('tr');
+      if (!r.ok) tr.className = 'falla';
+      celda(tr, r.ok ? '✓' : (r.falsoPositivo ? 'FALSO' : '✕'), 'marca ' + (r.ok ? 'si' : 'no'));
+      celda(tr, r.consulta, 'consulta');
+      celda(tr, r.espera, 'id');
+      celda(tr, r.obtenido, 'id');
+      filasSenales.appendChild(tr);
+    });
+
+    informe.resultados.forEach(function (r) {
+      var tr = document.createElement('tr');
+      if (!r.ok) tr.className = 'falla';
+      celda(tr, r.ok ? '✓' : '✕', 'marca ' + (r.ok ? 'si' : 'no'));
+      celda(tr, r.consulta, 'consulta');
+      celda(tr, r.publico, 'id');
+      celda(tr, r.espera, 'id');
+      celda(tr, r.obtenido, 'id');
+      celda(tr, r.puntaje.toFixed(3), 'num');
+      celda(tr, r.ventaja.toFixed(3), 'num');
+      filas.appendChild(tr);
+    });
+  }
+
+  function leer(url) {
+    return fetch(url, { cache: 'no-cache' })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status + ' en ' + url); return r.json(); });
+  }
+
+  Promise.all([leer('../data/faq.json'), leer('../data/senales.json')])
+    .then(function (datos) {
+      pintar(
+        window.HopperTest.correr(window.Hopper, datos[0]),
+        window.HopperTest.correrSenales(window.Hopper, datos[1])
+      );
+    })
+    .catch(function (err) {
+      resumen.className = 'con-fallas';
+      resumen.innerHTML = '<p class="cifra">No se pudieron leer los datos</p>' +
+        '<p class="detalle">' + err.message + '. Servilos por HTTP: abierto con doble clic el navegador bloquea la lectura.</p>';
+    });
+})();
+</script>
+</body>
+</html>

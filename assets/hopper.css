@@ -1,0 +1,465 @@
+/* ═══════════════════════════════════════════════════════════════
+   Hopper · estilos del asistente
+   Instituto Leonardo Murialdo · 7mo Informática 2026
+
+   Dos familias de color, como en style.css del sitio:
+
+   - Tokens ADAPTATIVOS (--h-ink, --h-bg, --h-card, --h-accent):
+     se heredan de la página con var(--x, fallback) y cambian con el
+     modo oscuro. Se usan para texto sobre el fondo propio del panel.
+
+   - Tokens de RELLENO (--h-fill, --h-fill2): constantes en los dos
+     modos. Son los paneles sólidos (cabecera, burbuja, globo del
+     usuario, botón de enviar), que siempre llevan texto blanco.
+     No pueden tomar --accent: en modo oscuro ese token se aclara
+     para leerse sobre fondo negro, y blanco sobre celeste no se lee.
+   ═══════════════════════════════════════════════════════════════ */
+
+.hopper-raiz {
+  --h-bg:      var(--bg,      #f5f2ed);
+  --h-bg2:     var(--bg2,     #eae6df);
+  --h-card:    var(--card,    #ffffff);
+  --h-ink:     var(--ink,     #0f0f0f);
+  --h-ink2:    var(--ink2,    #3a3a3a);
+  --h-ink3:    var(--ink3,    #6b6b6b);
+  --h-accent:  var(--accent,  #1a3a5c);
+  --h-warm:    var(--warm,    #c45e1a);
+  --h-border:  var(--border,  rgba(15, 15, 15, .12));
+  --h-radius:  var(--radius,  14px);
+  --h-rsm:     var(--rsm,     8px);
+
+  /* Rellenos sólidos: iguales en modo claro y oscuro. */
+  --h-fill:    var(--navy-fill,  #1a3a5c);
+  --h-fill2:   var(--green-fill, #2d6a4f);
+  --h-warmfill: var(--warm-fill, #c45e1a);
+  --h-onfill:  #ffffff;
+
+  --h-panel:   360px;
+
+  /* Alto exacto de un chip (18 de linea + 10 de padding + 2 de borde)
+     y separacion entre chips. Los usa el max-height de la barra, que
+     necesita numeros enteros para cortar entre filas y no dentro de
+     una: por eso el chip lleva line-height en px y no un multiplo. */
+  --h-fila-chip: 30px;
+  --h-gap-chip:  6px;
+
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--h-ink);
+}
+
+.hopper-raiz *,
+.hopper-raiz *::before,
+.hopper-raiz *::after { box-sizing: border-box; }
+
+.hopper-raiz :focus-visible {
+  outline: 2px solid var(--focus, var(--h-warm));
+  outline-offset: 2px;
+}
+
+/* ── BURBUJA ─────────────────────────────────────────────────────
+   Arranca como píldora (logo + nombre) para que se entienda qué es,
+   y a los pocos segundos se contrae al logo solo. Vuelve a abrirse
+   al pasar el mouse o al recibir foco por teclado. */
+
+.hopper-burbuja {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  border-radius: 100px;
+  background: var(--h-fill);
+  color: var(--h-onfill);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(15, 15, 15, .28);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.hopper-burbuja:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(15, 15, 15, .34); }
+.hopper-burbuja:active { transform: translateY(0); }
+
+.hopper-marca {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--h-fill2);
+  color: var(--h-onfill);
+}
+
+.hopper-marca svg { width: 20px; height: 20px; display: block; }
+
+.hopper-burbuja-texto {
+  display: block;
+  max-width: 0;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: max-width .5s ease, opacity .32s ease, padding .5s ease;
+}
+
+.hopper-burbuja--extendida .hopper-burbuja-texto,
+.hopper-burbuja:hover .hopper-burbuja-texto,
+.hopper-burbuja:focus-visible .hopper-burbuja-texto {
+  max-width: 120px;
+  padding: 0 10px 0 9px;
+  opacity: 1;
+}
+
+/* ── PANEL ───────────────────────────────────────────────────────
+   [hidden] necesita su propia regla: una clase con display:flex le
+   gana al display:none que el navegador aplica al atributo. */
+
+.hopper-panel[hidden] { display: none; }
+
+.hopper-panel {
+  display: flex;
+  flex-direction: column;
+  width: var(--h-panel);
+  max-width: calc(100vw - 32px);
+  max-height: min(560px, calc(100vh - 120px));
+  overflow: hidden;
+  border: 1px solid var(--h-border);
+  border-radius: var(--h-radius);
+  background: var(--h-card);
+  box-shadow: 0 18px 60px rgba(15, 15, 15, .24);
+  animation: hopper-entrar .22s ease;
+}
+
+@keyframes hopper-entrar {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── CABECERA ────────────────────────────────────────────────── */
+
+.hopper-cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  background: var(--h-fill);
+  color: var(--h-onfill);
+}
+
+.hopper-identidad { display: flex; align-items: center; gap: 10px; min-width: 0; }
+
+.hopper-titulo {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  line-height: 1.25;
+}
+
+.hopper-rol {
+  margin: 0;
+  font-size: 10.5px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, .72);
+}
+
+.hopper-acciones { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+
+.hopper-accion {
+  padding: 5px 10px;
+  border: 1px solid rgba(255, 255, 255, .26);
+  border-radius: 100px;
+  background: rgba(255, 255, 255, .1);
+  color: var(--h-onfill);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .18s ease;
+}
+
+.hopper-accion:hover { background: rgba(255, 255, 255, .24); }
+.hopper-cerrar { padding: 5px 9px; font-size: 12px; line-height: 1; }
+
+/* ── HILO ────────────────────────────────────────────────────── */
+
+.hopper-hilo {
+  /* flex-basis 0: el hilo es lo unico que cede o crece cuando cambia
+     el alto del panel. El minimo lo protege de quedar en nada. */
+  flex: 1;
+  min-height: 120px;
+  overflow-y: auto;
+  padding: 16px;
+  background: var(--h-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hopper-msj { display: flex; }
+.hopper-msj-usuario { justify-content: flex-end; }
+
+.hopper-globo {
+  max-width: 90%;
+  padding: 11px 13px;
+  border-radius: var(--h-radius);
+  font-weight: 400;
+}
+
+.hopper-msj-hopper .hopper-globo {
+  border: 1px solid var(--h-border);
+  border-bottom-left-radius: var(--h-rsm);
+  background: var(--h-card);
+  color: var(--h-ink2);
+}
+
+.hopper-msj-usuario .hopper-globo {
+  border-bottom-right-radius: var(--h-rsm);
+  background: var(--h-fill2);
+  color: var(--h-onfill);
+}
+
+/* Contenido de las respuestas: sin 700 en texto explicativo. */
+.hopper-globo p { margin: 0 0 8px; }
+.hopper-globo p:last-child { margin-bottom: 0; }
+.hopper-globo strong { font-weight: 500; color: var(--h-ink); }
+.hopper-globo ul { margin: 0 0 8px; padding-left: 18px; }
+.hopper-globo ul:last-child { margin-bottom: 0; }
+.hopper-globo li { margin-bottom: 5px; }
+.hopper-globo li:last-child { margin-bottom: 0; }
+
+/* Avisos de señal (netiqueta, crisis): se distinguen del contenido
+   de la materia con una barra cálida, no con color de texto. */
+.hopper-globo-senal {
+  border-left: 3px solid var(--h-warmfill);
+  background: var(--h-bg2);
+}
+
+.hopper-enlace {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--h-accent);
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.hopper-enlace:hover { color: var(--h-warm); }
+
+.hopper-fallback-cierre {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: var(--h-ink3);
+}
+
+/* ── "ESTÁ PENSANDO" ─────────────────────────────────────────── */
+
+.hopper-puntos {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 13px 15px;
+}
+
+.hopper-puntos span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--h-ink3);
+  animation: hopper-latido 1.1s ease-in-out infinite;
+}
+
+.hopper-puntos span:nth-child(2) { animation-delay: .16s; }
+.hopper-puntos span:nth-child(3) { animation-delay: .32s; }
+
+@keyframes hopper-latido {
+  0%, 60%, 100% { opacity: .28; transform: translateY(0); }
+  30%           { opacity: 1;   transform: translateY(-3px); }
+}
+
+/* ── BOTONES DE OPCIÓN (público y sugerencias del fallback) ──── */
+
+.hopper-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.hopper-opcion {
+  padding: 9px 12px;
+  border: 1px solid var(--h-border);
+  border-radius: var(--h-rsm);
+  background: var(--h-bg2);
+  color: var(--h-ink);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .18s ease, background .18s ease;
+}
+
+.hopper-opcion:hover:not(:disabled) { border-color: var(--h-accent); background: var(--h-card); }
+.hopper-opcion:disabled { opacity: .5; cursor: default; }
+
+/* ── CHIPS ───────────────────────────────────────────────────── */
+
+.hopper-chips {
+  display: flex;
+  /* flex: 0 0 auto es obligatorio. Con el valor por defecto (0 1 auto)
+     esta barra es la que absorbe todo el achique del panel, porque el
+     hilo tiene flex-basis 0 y no participa del reparto: con preguntas
+     largas (varias filas de chips) la barra quedaba aplastada a media
+     fila y parecia que no habia chips. */
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: var(--h-gap-chip);
+  padding: 10px 14px;
+  border-top: 1px solid var(--h-border);
+  background: var(--h-bg2);
+  /* Alto de exactamente 3 filas de chips: padding de arriba + 3 chips
+     + los 2 gaps de por medio. Sin sumar el padding de abajo a proposito:
+     asi el recorte cae en el hueco entre la fila 3 y la 4, y nunca parte
+     un chip al medio (que es lo que hace parecer que la barra esta rota).
+     Si cambia el tamano de letra del chip, ajustar --h-fila-chip. */
+  max-height: calc(10px + 3 * var(--h-fila-chip) + 2 * var(--h-gap-chip) + 1px);
+  overflow-y: auto;
+}
+
+.hopper-chips:empty { display: none; }
+
+.hopper-chip {
+  /* Una sola linea por chip: asi cada fila mide siempre lo mismo y el
+     max-height de la barra puede cortar en filas enteras en vez de
+     partir un chip al medio. El texto completo queda en el title. */
+  max-width: 100%;
+  padding: 5px 11px;
+  border: 1px solid var(--h-border);
+  border-radius: 100px;
+  background: var(--h-card);
+  color: var(--h-ink2);
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 500;
+  line-height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: border-color .18s ease, color .18s ease;
+}
+
+.hopper-chip:hover { border-color: var(--h-accent); color: var(--h-accent); }
+
+/* ── FORMULARIO ──────────────────────────────────────────────── */
+
+.hopper-formulario {
+  display: flex;
+  gap: 8px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--h-border);
+  background: var(--h-card);
+}
+
+.hopper-campo {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 13px;
+  border: 1px solid var(--h-border);
+  border-radius: 100px;
+  background: var(--h-bg);
+  color: var(--h-ink);
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.hopper-campo::placeholder { color: var(--h-ink3); }
+.hopper-campo:disabled { opacity: .6; }
+.hopper-campo:focus { border-color: var(--h-accent); outline: none; }
+.hopper-campo:focus-visible { outline: 2px solid var(--focus, var(--h-warm)); outline-offset: 1px; }
+
+.hopper-enviar {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: var(--h-fill);
+  color: var(--h-onfill);
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background .18s ease;
+}
+
+.hopper-enviar:hover:not(:disabled) { background: var(--h-fill2); }
+.hopper-enviar:disabled { opacity: .45; cursor: default; }
+
+/* ── PIE ─────────────────────────────────────────────────────── */
+
+.hopper-pie {
+  margin: 0;
+  padding: 8px 14px 11px;
+  border-top: 1px solid var(--h-border);
+  background: var(--h-card);
+  font-size: 10.5px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--h-ink3);
+  text-align: center;
+}
+
+/* ── MOBILE ──────────────────────────────────────────────────── */
+
+@media (max-width: 560px) {
+  .hopper-raiz {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    align-items: stretch;
+  }
+
+  .hopper-raiz.hopper-abierto .hopper-burbuja { display: none; }
+
+  .hopper-burbuja { align-self: flex-end; }
+
+  .hopper-panel {
+    width: 100%;
+    max-width: none;
+    max-height: calc(100vh - 24px);
+    max-height: calc(100dvh - 24px);
+  }
+
+  .hopper-globo { max-width: 94%; }
+}
+
+/* ── MOVIMIENTO REDUCIDO ─────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .hopper-panel { animation: none; }
+  .hopper-puntos span { animation: none; opacity: .5; }
+  .hopper-burbuja,
+  .hopper-burbuja-texto,
+  .hopper-accion,
+  .hopper-opcion,
+  .hopper-chip,
+  .hopper-enviar,
+  .hopper-enlace { transition: none; }
+  .hopper-burbuja:hover { transform: none; }
+}

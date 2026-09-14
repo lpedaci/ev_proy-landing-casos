@@ -25,9 +25,20 @@ ev-proy-hub/
 ├── assets/
 │   ├── css/
 │   │   └── style.css       # Estilos globales (tokens, layout, componentes, responsive)
-│   └── js/
-│       └── script.js       # Animaciones scroll-triggered (IntersectionObserver)
+│   ├── js/
+│   │   └── script.js       # Animaciones scroll-triggered (IntersectionObserver)
+│   ├── hopper.js           # Asistente de FAQ: motor de búsqueda + interfaz
+│   └── hopper.css          # Estilos del asistente
 │
+├── data/
+│   ├── faq.json            # Contenido del asistente: preguntas, respuestas y keywords
+│   └── senales.json        # Netiqueta y señales de crisis (centros de ayuda)
+│
+├── test/
+│   ├── test-matching.js    # 20 consultas reales y su destino esperado
+│   └── test-matching.html  # Las mismas pruebas, para correr en el navegador
+│
+├── HOPPER.md               # Cómo agregar una pregunta al asistente
 └── README.md               # Este archivo
 ```
 
@@ -44,6 +55,7 @@ ev-proy-hub/
 | Accesibilidad | Estados `:focus-visible` y soporte de `prefers-reduced-motion` |
 | Google Fonts — DM Sans | Tipografía principal |
 | GitHub Pages | Hosting estático gratuito |
+| JSON estático | Contenido del asistente de FAQ, sin backend ni API |
 
 Sin dependencias externas, sin frameworks, sin bundlers. El sitio funciona desde cualquier servidor estático o directamente desde el sistema de archivos.
 
@@ -57,6 +69,28 @@ Sin dependencias externas, sin frameworks, sin bundlers. El sitio funciona desde
 - **Proyectos 2026** — Dashboard en formato bento con los proyectos finalizados del ciclo (todavía sin entregas, estado "Próximamente")
 - **Cómo trabajamos** — Los 6 principios que estructuran el proceso de cada proyecto
 - **Materiales** — Los 3 módulos del programa, el ejemplo de documentación, los lineamientos, el cronograma y las pautas de entrega
+
+---
+
+## Hopper · asistente de preguntas frecuentes
+
+El sitio incluye **Hopper**, un widget de FAQ conversacional que responde consultas
+frecuentes sobre la materia (etapas E01 a E06, estructura de la documentación, siglas,
+formato de entrega, los dos casos de estudio). Busca por coincidencia de palabras clave
+contra `data/faq.json`: no hay modelo de lenguaje, no hay backend y no inventa respuestas.
+Si no encuentra nada, ofrece las tres preguntas más cercanas y deriva a la profesora.
+
+Antes de buscar, pasa la consulta por `data/senales.json`: recuerda las netiquetas ante un insulto
+y, ante una señal de crisis o de violencia, responde con los teléfonos de ayuda de Argentina y
+remite a un adulto del instituto.
+
+Se inyecta con una sola línea antes de `</body>`:
+
+```html
+<script src="assets/hopper.js" defer></script>
+```
+
+Para agregar o editar preguntas: **[HOPPER.md](HOPPER.md)**.
 
 ---
 
