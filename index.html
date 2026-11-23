@@ -133,6 +133,7 @@
         <div class="cb-stat"><div class="cb-num">6</div><div class="cb-desc">Fases del proyecto</div></div>
         <div class="cb-stat"><div class="cb-num">2</div><div class="cb-desc">Casos de uso reales</div></div>
         <div class="cb-stat"><div class="cb-num">4</div><div class="cb-desc">Módulos de contenido</div></div>
+        <div class="cb-stat"><div class="cb-num">12</div><div class="cb-desc">Proyectos finalizados</div></div>
       </div>
     </div>
 
@@ -305,38 +306,21 @@
   <div class="sec-label">Proyectos del ciclo</div>
   <h2 class="sec-title">Proyectos finalizados 2026</h2>
   <p class="sec-desc">
-    A medida que cada equipo entregue su proyecto, va a aparecer acá: nombre, capturas,
-    stack utilizado y enlace a la demo en vivo.
+    Doce equipos de 7mo INFO A y 7mo INFO B llevaron un problema real de un cliente
+    hasta un sistema funcionando, documentado y con su landing de presentación.
   </p>
 
-  <div class="proy-grid">
-    <div class="proy-soon">
-      <div class="proy-soon-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-      </div>
-      <div class="proy-soon-title">Próximamente</div>
-      <p class="proy-soon-body">
-        Todavía ningún equipo entregó su proyecto final. Esta sección se va a actualizar
-        con cada entrega del ciclo 2026 a medida que estén disponibles.
-      </p>
+  <div class="proy-toolbar">
+    <div class="proy-filtros" role="group" aria-label="Filtrar proyectos por curso">
+      <button type="button" class="proy-chip" data-filtro="todos" aria-pressed="true">Todos</button>
+      <button type="button" class="proy-chip" data-filtro="A" aria-pressed="false">7mo INFO A</button>
+      <button type="button" class="proy-chip" data-filtro="B" aria-pressed="false">7mo INFO B</button>
     </div>
-
-    <div class="proy-ghost" aria-hidden="true">
-      <div class="proy-ghost-cover"></div>
-      <div class="proy-ghost-line w70"></div>
-      <div class="proy-ghost-line w40"></div>
-    </div>
-    <div class="proy-ghost" aria-hidden="true">
-      <div class="proy-ghost-cover"></div>
-      <div class="proy-ghost-line w60"></div>
-      <div class="proy-ghost-line w50"></div>
-    </div>
-    <div class="proy-ghost" aria-hidden="true">
-      <div class="proy-ghost-cover"></div>
-      <div class="proy-ghost-line w80"></div>
-      <div class="proy-ghost-line w35"></div>
-    </div>
+    <p class="proy-count" id="proyCount" aria-live="polite">Mostrando 12 proyectos</p>
   </div>
+
+  <!-- Tarjetas generadas desde assets/js/proyectos-data.js -->
+  <div class="proy-grid" id="proyGrid"></div>
 </section>
 
 <div class="divider"></div>
@@ -532,6 +516,7 @@
       <a href="https://lpedaci.github.io/ev_proy-modulo02-caso02/"        target="_blank" rel="noopener">Caso 02 — Valeria Gómez</a>
       <a href="https://lpedaci.github.io/ev_proy-modulo02-caso01-slides/" target="_blank" rel="noopener">PPT Caso 01</a>
       <a href="https://lpedaci.github.io/ev_proy-modulo02-caso02-slides/" target="_blank" rel="noopener">PPT Caso 02</a>
+      <a href="#proyectos">Proyectos 2026</a>
     </div>
     <div class="footer-col">
       <h4>Materiales</h4>
@@ -557,6 +542,8 @@
 </footer>
 
 <!-- Script al final del body para no bloquear el render -->
+<script src="assets/js/proyectos-data.js"></script>
+<script src="assets/js/proyectos.js"></script>
 <script src="assets/js/script.js"></script>
 
 <!-- Hopper · asistente de FAQ. Una sola línea, en todas las páginas del sitio. -->

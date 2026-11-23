@@ -1,0 +1,27 @@
+{
+  "name": "ev_proy-modulo02-landing-casos-chatbot",
+  "version": "1.0.0",
+  "description": "Hub de Evaluación de Proyectos",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "capturas": "node scripts/capturas.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lpedaci/ev_proy-landing-casos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lpedaci/ev_proy-landing-casos/issues"
+  },
+  "homepage": "https://github.com/lpedaci/ev_proy-landing-casos#readme",
+  "devDependencies": {
+    "playwright": "^1.65.1",
+    "sharp": "^0.35.5"
+  },
+  "private": true
+}
