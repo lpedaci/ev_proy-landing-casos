@@ -1,105 +1,183 @@
 # Evaluación de Proyectos — Hub
 
-**Programa de formación en gestión y desarrollo de proyectos tecnológicos · 7mo Informática 2026**  
+**Espacio curricular de 7mo año · Tecnicatura en Informática Personal y Profesional · Ciclo 2026**
 Instituto Leonardo Murialdo · Proyecto Tecnológico Interdisciplinario
 
----
-
-## Descripción del programa
-
-Este hub centraliza los recursos del espacio curricular **Evaluación de Proyectos** para los estudiantes de 7mo año de la Tecnicatura en Informática Personal y Profesional del Instituto Leonardo Murialdo.
-
-El programa forma a los participantes en una metodología completa de desarrollo de proyectos tecnológicos orientada al cliente real: desde el relevamiento inicial y la validación del problema hasta la entrega del producto funcional. Cada ciclo lectivo incluye dos casos de estudio desarrollados en profundidad, que modelan el proceso de diagnóstico, diseño e implementación de soluciones de software y hardware.
-
-El sitio está diseñado para publicarse vía **GitHub Pages** y actúa como punto de acceso público al programa y sus entregables.
+Sitio público de la asignatura **Evaluación de Proyectos**. Reúne en una sola página el método de trabajo, dos casos de estudio modelo, los proyectos finalizados del ciclo y los materiales de cursada, con un asistente de preguntas frecuentes (Hopper).
+Se publica con **GitHub Pages** y no requiere backend.
 
 ---
 
-## Estructura de archivos
+## 1. Para quién es y qué tiene que resolver
 
-```
-ev-proy-hub/
-│
-├── index.html              # Página principal del hub
-│
-├── assets/
-│   ├── css/
-│   │   └── style.css       # Estilos globales (tokens, layout, componentes, responsive)
-│   ├── js/
-│   │   └── script.js       # Animaciones scroll-triggered (IntersectionObserver)
-│   ├── hopper.js           # Asistente de FAQ: motor de búsqueda + interfaz
-│   └── hopper.css          # Estilos del asistente
-│
-├── data/
-│   ├── faq.json            # Contenido del asistente: preguntas, respuestas y keywords
-│   └── senales.json        # Netiqueta y señales de crisis (centros de ayuda)
-│
-├── test/
-│   ├── test-matching.js    # 20 consultas reales y su destino esperado
-│   └── test-matching.html  # Las mismas pruebas, para correr en el navegador
-│
-├── HOPPER.md               # Cómo agregar una pregunta al asistente
-└── README.md               # Este archivo
-```
+| Público | Qué necesita | Dónde lo encuentra |
+|---|---|---|
+| **Estudiantes de 7mo** | Entender el método, ver un ejemplo resuelto y llegar rápido a los materiales y pautas | Fases del proyecto · Casos de estudio · Materiales · Hopper |
+| **Equipos que arrancan su proyecto** | Referentes concretos de lo que se espera al final del ciclo | Proyectos finalizados 2026 |
+| **Familias, clientes e instituciones** | Ver qué se hace en la materia y con qué nivel | Hero · Contexto · Proyectos |
+| **Docentes** | Un punto único para compartir con el curso | Toda la página, con enlaces profundos por sección (`#casos`, `#materiales`…) |
 
 ---
 
-## Tecnologías utilizadas
+## 2. Diseño instruccional: por qué la página tiene este orden
 
-| Tecnología | Uso |
+La página es un **recorrido de aprendizaje**, no un listado de recursos. Cada sección prepara la siguiente:
+
+1. **Hero — el propósito.** "Del problema real al proyecto tecnológico". Antes de cualquier contenido, el estudiante sabe hacia dónde va.
+2. **Contexto — el marco y el método.** Qué es la asignatura, cómo se articula con el proyecto interdisciplinario y las **6 fases (E01–E06)** presentadas como cronograma: cada fase deja un entregable que valida la siguiente.
+3. **Casos de estudio — ejemplos resueltos** (*worked examples*). Roberto y Valeria muestran el método completo aplicado a un problema real: datos del cliente, síntomas, causa raíz y solución. Ver la tarea resuelta antes de hacerla baja la carga cognitiva.
+4. **Principio fundamental — la idea fuerza.** "Definición incorrecta → solución incorrecta" se destaca aparte para que sea lo que se recuerde.
+5. **Proyectos finalizados — modelos de pares.** Catorce equipos del mismo año ya hicieron el recorrido: funcionan como evidencia de que es alcanzable y como vara de calidad.
+6. **Cómo trabajamos — los criterios.** Seis principios que después se evalúan (usuario real, entrevista, viabilidad, OKRs, HCI, entrega completa).
+7. **Materiales — las herramientas.** Módulos, lineamientos, cronograma GANTT, pautas de entrega y el ejemplo de documentación, al final, cuando ya se entiende para qué sirve cada uno.
+8. **Cierre.** "Todo empieza por un usuario con una problemática real": vuelve al inicio del ciclo.
+
+**Hopper** acompaña todo el recorrido como **apoyo just-in-time**: responde dudas puntuales (siglas, etapas, formato de entrega) sin que el estudiante tenga que salir de la página, y deriva a la docente lo que no le corresponde.
+
+---
+
+## 3. Sistema de diseño (UX/UI)
+
+### Dirección visual
+Estética **dark product**: fondo casi negro, tipografía grande y compacta, tarjetas tipo *bento*, brillos sutiles y un acento violeta. Busca que la asignatura se vea como un producto tecnológico actual, coherente con lo que los equipos construyen.
+
+### Tipografía
+- **Geist** para todo el texto; **Geist Mono** para rótulos técnicos (E01, "7mo INFO A", "Módulo 01").
+- Títulos grandes con interletrado negativo y **sin punto final**.
+- Cuerpo mínimo de 14px; textos largos con `text-wrap: pretty` y títulos con `balance`.
+
+### Color con significado
+Cada color identifica **una sola cosa** en todo el sitio. Todos están definidos como tokens en `:root` (`assets/css/style.css`).
+
+| Token | Color | Significa |
+|---|---|---|
+| `--navy-fill` / `--accent` | Violeta | Marca, Hopper, acciones principales |
+| `--curso-a` | Azul | 7mo INFO A |
+| `--curso-b` | Bordó | 7mo INFO B |
+| `--caso-r` | Lima | Caso 01 · Roberto |
+| `--caso-v` | Cian | Caso 02 · Valeria |
+| `--idea` | Ámbar | Principio fundamental de la asignatura |
+| Verde / naranja | — | Tarjetas de Materiales (entrega y lineamientos / planificación y ejemplo) |
+
+### Componentes principales
+- **Ventana del hero**: vista previa que resume el sitio (fase actual, casos activos, proyectos publicados, avance del ciclo).
+- **Franja de proyectos**: dos filas animadas, una por curso.
+- **Cronograma de fases**: GANTT con una barra por fase y E06 como hito final.
+- **Tarjetas de casos**: alineadas fila por fila (*subgrid*) para comparar los datos de ambos clientes a la misma altura.
+- **Carrusel de proyectos**: progreso y flechas arriba de las tarjetas; filtros por curso; todas las tarjetas con sus filas (título, texto, botón "Ver landing", enlaces) a la misma altura.
+- **Botones**: el **primario va a la derecha** y el secundario a la izquierda; al apilarse en mobile, el primario queda arriba.
+
+### Responsive
+| Ancho | Comportamiento |
 |---|---|
-| HTML5 semántico | Estructura del documento |
-| CSS3 (custom properties) | Sistema de diseño con tokens, layout Grid/Flex, bento sections |
-| Tema oscuro | Diseño dark-first (bento cards, acento violeta), contrastes AA verificados |
-| JavaScript vanilla (ES6+) | `IntersectionObserver` para scroll-spy de navegación y animaciones de entrada |
-| Accesibilidad | Estados `:focus-visible` y soporte de `prefers-reduced-motion` |
-| Google Fonts — Geist + Geist Mono | Tipografía principal |
-| GitHub Pages | Hosting estático gratuito |
-| JSON estático | Contenido del asistente de FAQ, sin backend ni API |
-
-Sin dependencias externas, sin frameworks, sin bundlers. El sitio funciona desde cualquier servidor estático o directamente desde el sistema de archivos.
+| > 1024px | Navegación completa, carrusel de 3 tarjetas |
+| ≤ 1024px | Menú hamburguesa, carrusel de 2 tarjetas, enlaces de Materiales como botón a ancho completo |
+| ≤ 860px | Contenidos en una columna |
+| ≤ 600px | Carrusel de una tarjeta y media (indica que se desliza), botones apilados a ancho completo |
 
 ---
 
-## Secciones del hub
+## 4. Accesibilidad
 
-- **Hero** — Presentación del programa, accesos directos y vista previa de los casos de estudio
-- **Contexto** — Marco institucional y las 6 fases del ciclo de proyecto
-- **Casos de estudio** — Roberto Fernández (Caso 01) y Valeria Gómez (Caso 02)
-- **Proyectos 2026** — Dashboard en formato bento con los proyectos finalizados del ciclo (todavía sin entregas, estado "Próximamente")
-- **Cómo trabajamos** — Los 6 principios que estructuran el proceso de cada proyecto
-- **Materiales** — Los 3 módulos del programa, el ejemplo de documentación, los lineamientos, el cronograma y las pautas de entrega
+- Contraste **WCAG AA** en todos los textos (los valores están anotados junto a cada token).
+- Enlace **"Saltar al contenido"**, landmarks (`header`, `main`, `footer`, `nav`) y jerarquía de títulos ordenada.
+- Foco visible en todos los elementos interactivos; el menú móvil se cierra con **Escape** y devuelve el foco.
+- Carrusel con `aria-roledescription`, botones con nombre accesible, control por **flechas del teclado** y contador de resultados con `aria-live`.
+- Áreas táctiles de **44px** mínimo.
+- Íconos SVG decorativos ocultos a lectores de pantalla; enlaces externos anuncian que abren pestaña nueva.
+- Con **`prefers-reduced-motion`** se desactivan animaciones, el marquee y los revelados.
+- Rendimiento: la animación de la franja se pausa cuando no está en pantalla y las capturas se cargan en diferido (`loading="lazy"`).
 
 ---
 
-## Hopper · asistente de preguntas frecuentes
+## 5. Cómo mantener el contenido
 
-El sitio incluye **Hopper**, un widget de FAQ conversacional que responde consultas
-frecuentes sobre la materia (etapas E01 a E06, estructura de la documentación, siglas,
-formato de entrega, los dos casos de estudio). Busca por coincidencia de palabras clave
-contra `data/faq.json`: no hay modelo de lenguaje, no hay backend y no inventa respuestas.
-Si no encuentra nada, ofrece las tres preguntas más cercanas y deriva a la profesora.
+### Agregar o editar un proyecto
+Todo sale de **`assets/js/proyectos-data.js`**; no hace falta tocar el HTML.
 
-Antes de buscar, pasa la consulta por `data/senales.json`: recuerda las netiquetas ante un insulto
-y, ante una señal de crisis o de violencia, responde con los teléfonos de ayuda de Argentina y
-remite a un adulto del instituto.
-
-Se inyecta con una sola línea antes de `</body>`:
-
-```html
-<script src="assets/hopper.js" defer></script>
+```js
+{
+  slug: 'mi-proyecto',              // nombre del archivo de captura
+  nombre: 'Mi Proyecto',
+  alias: 'Subtítulo opcional',
+  iniciales: 'MP',                  // se muestran si falta la captura
+  curso: 'A',                       // 'A' o 'B'
+  rubro: 'Cliente · Rubro',
+  descripcion: 'Qué problema resuelve, en una o dos líneas.',
+  tipo: ['Software', 'Web'],
+  integrantes: ['Apellido', 'Apellido'],
+  landing: 'https://…',             // botón "Ver landing"
+  capturaTema: 'dark',              // opcional: capturar la versión oscura
+  links: [
+    { label: 'Documentación', url: 'https://…' },
+    { label: 'Manual', url: 'https://…' }
+  ]
+}
 ```
 
-Para agregar o editar preguntas: **[HOPPER.md](HOPPER.md)**.
+**Criterios editoriales**
+- El **orden del array es el orden del carrusel**: se alternan INFO A e INFO B.
+- **No se publican** accesos a Demo, repositorios de GitHub ni archivos alojados en github.com: se cuidan los sistemas y el código de los equipos. Solo landing, documentación, manuales, FAQ y presentaciones.
+- Si un proyecto tiene varios manuales ("Manual admin", "Manual alumno"), se agrupan solos como **"Manuales por rol"**.
+- Al cambiar la cantidad de proyectos, actualizar los totales del `index.html` (hero, franja, estadística y texto de la sección).
+
+### Capturas de las landings
+```powershell
+npm i
+npx playwright install chromium
+node scripts/capturas.mjs mi-proyecto
+```
+Genera `assets/proyectos/<slug>.webp` (1440×900). Sin argumentos, captura todos.
+
+### Hopper
+Las preguntas y respuestas están en `data/faq.json`. Ver **[HOPPER.md](HOPPER.md)**.
+
+---
+
+## 6. Estructura de archivos
+
+```
+├── index.html                  Página única del hub
+├── assets/
+│   ├── css/style.css           Tokens, componentes y responsive
+│   ├── js/
+│   │   ├── proyectos-data.js   Datos de los proyectos (fuente única)
+│   │   ├── proyectos.js        Tarjetas, filtros y carrusel
+│   │   └── script.js           Menú, nav activo, franja de proyectos, revelados
+│   ├── proyectos/*.webp        Capturas de las landings
+│   ├── hopper.js / hopper.css  Asistente de FAQ
+├── data/
+│   ├── faq.json                Contenido de Hopper
+│   └── senales.json            Netiqueta y señales de crisis
+├── scripts/capturas.mjs        Generador de capturas (Playwright)
+├── test/                       Pruebas del buscador de Hopper
+├── HOPPER.md                   Guía para editar el asistente
+└── README.md
+```
+
+## 7. Tecnologías
+
+HTML5 semántico · CSS3 (custom properties, Grid, subgrid) · JavaScript vanilla · Google Fonts (Geist, Geist Mono) · GitHub Pages.
+Sin frameworks ni bundlers. Playwright y Sharp se usan solo para generar capturas, no en el sitio publicado.
+
+---
+
+## 8. Checklist de QA antes de publicar
+
+- [ ] Se ve bien en **desktop (1440px), tablet (768px) y mobile (375px)**, sin scroll horizontal.
+- [ ] Consola del navegador sin errores.
+- [ ] Todas las tarjetas del carrusel tienen el botón "Ver landing" a la misma altura.
+- [ ] Ningún proyecto enlaza a Demo ni a GitHub.
+- [ ] Los totales de proyectos coinciden en todo el sitio.
+- [ ] Navegación completa con teclado (Tab, Escape, flechas en el carrusel).
+- [ ] Títulos sin punto final; botón primario a la derecha.
 
 ---
 
 ## Créditos
 
-- **Autor**: Prof. Pedaci, Lourdes — [LinkedIn](https://www.linkedin.com/in/lourdes-pedaci/)
+- **Autoría**: Prof. Pedaci, Lourdes — [LinkedIn](https://www.linkedin.com/in/lourdes-pedaci/)
 - **Institución**: Instituto Leonardo Murialdo — Tres de Febrero, Buenos Aires
-- **Espacio curricular:** Evaluación de Proyectos · 7mo año · Ciclo lectivo 2026
+- **Espacio curricular**: Evaluación de Proyectos · 7mo año · Ciclo lectivo 2026
 
----
-
-*Los casos de estudio son ficticios y fueron desarrollados como modelos de referencia para ilustrar la metodología del programa. Su uso es exclusivamente formativo.*
+*Los casos de estudio de Roberto y Valeria son ficticios y se desarrollaron como modelos de referencia para ilustrar la metodología. Los proyectos finalizados pertenecen a sus equipos.*
