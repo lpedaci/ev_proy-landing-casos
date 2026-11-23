@@ -3,23 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#08080a">
+  <meta name="description" content="Hub de Evaluación de Proyectos · 7mo Informática 2026 · Instituto Leonardo Murialdo. Casos de uso, proyectos finalizados, metodología y materiales.">
   <title>Evaluación de Proyectos — Hub · Instituto Leonardo Murialdo</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts · Geist + Geist Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Estilos -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
+<!-- Íconos reutilizables (Lucide, trazo 2px) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-slides" viewBox="0 0 24 24"><path d="M2 4h20v12H2zM12 16v4M8 20h8"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0 5 5L22 14l-8 8-2.3-2.3a4 4 0 0 0-5-5L2 10l8-8 2.3 2.3"/><path d="m8 8 8 8"/></symbol>
+  <symbol id="i-sensor" viewBox="0 0 24 24"><path d="M14 4v10.5a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/><path d="M12 15v3"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16.2 7.8-2.1 6.3-6.3 2.1 2.1-6.3z"/></symbol>
+  <symbol id="i-gantt" viewBox="0 0 24 24"><path d="M3 3v18h18M7 7h8M9 12h9M7 17h6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M9 2h6v3H9zM7 4H5v18h14V4h-2"/><path d="m9 14 2 2 4-4"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.5.4.85.98.9 1.6h5.4c.05-.62.4-1.2.9-1.6A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.2L3 21l1.8-6.4A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M5 21h14M6 7h12M6 7l-3 7a3 3 0 0 0 6 0zM18 7l-3 7a3 3 0 0 0 6 0z"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+  <symbol id="i-package" viewBox="0 0 24 24"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-chevron-l" viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></symbol>
+  <symbol id="i-chevron-r" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+  <!-- Marca: cronograma GANTT con hito (gestión de proyectos) -->
+  <symbol id="i-mark" viewBox="0 0 24 24"><rect x="1.5" y="1.5" width="21" height="21" rx="6" fill="currentColor"/><g fill="#fff"><rect x="5.5" y="6" width="8" height="2.6" rx="1.3"/><rect x="8.5" y="10.7" width="8" height="2.6" rx="1.3"/><rect x="11" y="15.4" width="4.5" height="2.6" rx="1.3"/><path d="m18.2 14.2 1.6 2.5-1.6 2.5-1.6-2.5z"/></g></symbol>
+</svg>
+
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
 <!-- ════════════════════════════════════════
      NAV
      ════════════════════════════════════════ -->
-<nav>
-  <div class="nav-inner">
-    <div class="nav-logo">Evaluación de <span>Proyectos</span></div>
+<header class="site-nav">
+  <nav class="nav-inner" aria-label="Principal">
+    <a href="#top" class="nav-logo" aria-label="Evaluación de Proyectos, inicio">
+      <svg class="nav-logo-mark" aria-hidden="true"><use href="#i-mark"/></svg>
+      <span>Evaluación de <b>Proyectos</b></span>
+    </a>
     <div class="nav-links">
       <a href="#contexto">Contexto</a>
       <a href="#casos">Casos de uso</a>
@@ -27,201 +61,208 @@
       <a href="#metodologia">Cómo trabajamos</a>
       <a href="#materiales">Materiales</a>
     </div>
-    <a href="https://www.linkedin.com/in/lourdes-pedaci" target="_blank" rel="noopener" class="nav-linkedin">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    <a href="https://www.linkedin.com/in/lourdes-pedaci" target="_blank" rel="noopener" class="nav-cta" aria-label="Pedaci, Lourdes en LinkedIn (se abre en una pestaña nueva)">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       Pedaci, Lourdes
     </a>
-    <button class="nav-burger" id="navBurger" aria-label="Menú" aria-expanded="false">
+    <button class="nav-burger" id="navBurger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
-  </div>
-</nav>
+  </nav>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menú móvil">
-  <a href="#contexto"  class="mobile-link">Contexto</a>
-  <a href="#casos"     class="mobile-link">Casos de uso</a>
-  <a href="#proyectos" class="mobile-link">Proyectos 2026</a>
-  <a href="#metodologia" class="mobile-link">Cómo trabajamos</a>
-  <a href="#materiales" class="mobile-link">Materiales</a>
-  <a href="https://www.linkedin.com/in/lourdes-pedaci" target="_blank" rel="noopener" class="mobile-menu-linkedin">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-    Pedaci, Lourdes
-  </a>
-</div>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <nav aria-label="Menú móvil">
+      <a href="#contexto"    class="mobile-link">Contexto</a>
+      <a href="#casos"       class="mobile-link">Casos de uso</a>
+      <a href="#proyectos"   class="mobile-link">Proyectos 2026</a>
+      <a href="#metodologia" class="mobile-link">Cómo trabajamos</a>
+      <a href="#materiales"  class="mobile-link">Materiales</a>
+      <a href="https://www.linkedin.com/in/lourdes-pedaci" target="_blank" rel="noopener" class="mobile-menu-linkedin">
+        Pedaci, Lourdes · LinkedIn
+        <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
 
 <!-- ════════════════════════════════════════
      HERO
      ════════════════════════════════════════ -->
-<div class="hero">
-  <div class="hero-grid">
-
-    <div class="hero-copy">
-      <div class="hero-eyebrow fade-up">
-        <span class="hero-eyebrow-pill">2026</span>
-        Tecnicatura en Informática Personal y Profesional
-      </div>
-      <h1 class="fade-up d1">
-        Del problema real<br>
-        al <em>proyecto</em><br>
-        <span class="warm">tecnológico.</span>
-      </h1>
-      <p class="hero-sub fade-up d2">
-        Asignatura de 7mo año que integra metodología de proyectos, investigación de usuarios,
-        diseño de sistemas y evaluación técnica-económica. Dos casos de uso reales. Un mismo método.
-      </p>
-      <div class="hero-meta fade-up d3">
-        <div class="hm-badge"><strong>Prof. Pedaci, Lourdes</strong> · Docente</div>
-        <div class="hm-badge"><strong>Evaluación de Proyectos</strong> · 7mo año</div>
-        <div class="hm-badge"><strong>Proyecto interdisciplinario</strong> · Modalidades 7mo año</div>
-      </div>
-      <div class="hero-ctas fade-up d4">
-        <a href="#casos"      class="btn-primary">Ver los casos de uso →</a>
-        <a href="#materiales" class="btn-sec">Materiales de la asignatura</a>
-      </div>
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <h1 id="hero-title" class="hero-title fade-up d1">
+      Del problema real<br>
+      al <span class="grad">proyecto tecnológico</span>
+    </h1>
+    <p class="hero-sub fade-up d2">
+      Asignatura de 7mo año que integra metodología de proyectos, investigación de usuarios,
+      diseño de sistemas y evaluación técnica-económica. Dos casos de uso reales. Un mismo método.
+    </p>
+    <div class="hero-ctas fade-up d3">
+      <a href="#materiales" class="btn btn-ghost">Materiales de la asignatura</a>
+      <a href="#casos" class="btn btn-primary">Ver los casos de uso <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
-
-    <div class="hero-visual fade-up d3" aria-hidden="true">
-      <div class="hv-card">
-        <div class="hv-card-head"><span class="hv-dot"></span> Casos de estudio activos</div>
-        <a href="#casos" class="hv-row" tabindex="-1">
-          <span class="hv-avatar rf">RF</span>
-          <span class="hv-row-text"><strong>Roberto Fernández</strong>Ferretería · Gestión de stock</span>
-          <span class="hv-arrow">→</span>
-        </a>
-        <a href="#casos" class="hv-row" tabindex="-1">
-          <span class="hv-avatar vg">VG</span>
-          <span class="hv-row-text"><strong>Valeria Gómez</strong>SensorOffice · Monitoreo ambiental</span>
-          <span class="hv-arrow">→</span>
-        </a>
-      </div>
-    </div>
-
+    <ul class="hero-meta fade-up d4" aria-label="Datos de la asignatura">
+      <li><strong>Prof. Pedaci, Lourdes</strong> · Docente</li>
+      <li><strong>Evaluación de Proyectos</strong> · 7mo año</li>
+      <li><strong>Proyecto interdisciplinario</strong> · Modalidades 7mo año</li>
+    </ul>
   </div>
-</div>
 
-<div class="divider"></div>
+  <!-- Vista previa decorativa: resume el contenido real del sitio -->
+  <div class="hero-stage fade-up d4" aria-hidden="true">
+    <div class="window">
+      <div class="window-bar">
+        <span class="wb-brand"><svg class="wb-mark"><use href="#i-mark"/></svg>Evaluación de Proyectos</span>
+        <span class="wb-crumbs"><span>Ciclo 2026</span><svg class="ic"><use href="#i-chevron-r"/></svg><span>Fases</span><svg class="ic"><use href="#i-chevron-r"/></svg><b>E04 · Prototipado HCI</b></span>
+        <span class="wb-right">
+          <span class="wb-status"><i></i>12 proyectos publicados</span>
+          <span class="wb-team"><span class="av av-violet">A</span><span class="av av-green">B</span><span class="av av-doc">LP</span></span>
+        </span>
+      </div>
+      <div class="wb-progress">
+        <span class="wbp-label">Avance del ciclo</span>
+        <span class="wbp-track"><i class="done"></i><i class="done"></i><i class="done"></i><i class="now"></i><i></i><i></i></span>
+        <span class="wbp-val">E04 de E06</span>
+      </div>
+      <div class="window-body">
+        <div class="wside">
+          <div class="wside-h">Fases</div>
+          <div class="wside-i"><span>E01</span>Validación</div>
+          <div class="wside-i"><span>E02</span>Factibilidad</div>
+          <div class="wside-i"><span>E03</span>Diseño</div>
+          <div class="wside-i is-on"><span>E04</span>Prototipado</div>
+          <div class="wside-i"><span>E05</span>Desarrollo</div>
+          <div class="wside-i"><span>E06</span>Presentación</div>
+        </div>
+        <div class="wmain">
+          <div class="wcard wcard-casos">
+            <div class="wcard-h"><span class="live-dot"></span>Casos de estudio activos</div>
+            <div class="wrow"><span class="av av-violet">RF</span><span><b>Roberto Fernández</b>Ferretería · Gestión de stock</span></div>
+            <div class="wrow"><span class="av av-green">VG</span><span><b>Valeria Gómez</b>SensorOffice · Monitoreo ambiental</span></div>
+          </div>
+          <div class="wcard wcard-stat">
+            <div class="wcard-h">Proyectos finalizados</div>
+            <div class="big-num">12</div>
+            <div class="mini-bars"><i style="--h:42%"></i><i style="--h:58%"></i><i style="--h:50%"></i><i style="--h:72%"></i><i style="--h:64%"></i><i style="--h:88%"></i><i style="--h:100%"></i></div>
+            <div class="wcard-f"><span><i class="sw sw-a"></i>INFO A · 5</span><span><i class="sw sw-b"></i>INFO B · 7</span></div>
+          </div>
+          <div class="wcard wcard-cmd">
+            <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+            <span>Preguntale a Hopper sobre E01…E06</span>
+            <kbd>?</kbd>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marquee con los proyectos del ciclo (se completa desde proyectos-data.js) -->
+  <div class="logos fade-up d5">
+    <div class="logos-head">
+      <p class="logos-label"><strong>12 proyectos en producción.</strong> Los equipos de 7mo INFO A y B llevaron un problema real hasta un sistema publicado</p>
+      <a href="#proyectos" class="logos-link">Ver los proyectos <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="marquee-wrap" id="marquee"></div>
+  </div>
+</section>
 
 <!-- ════════════════════════════════════════
-     CONTEXTO BAND
+     CONTEXTO
      ════════════════════════════════════════ -->
-<div class="context-band" id="contexto">
-  <div class="context-band-inner">
-
-    <!-- Columna izquierda: descripción -->
-    <div>
-      <div class="cb-label">¿De qué trata esta asignatura?</div>
-      <h2 class="cb-title">Proyectos que nacen de un problema real</h2>
-      <div class="cb-body">
-        <p>
-          Evaluación de Proyectos enseña a transformar un problema detectado en un cliente real
-          en un sistema tecnológico funcional, viable y presentable. No se trabaja sobre supuestos:
-          el punto de partida es siempre un usuario concreto con una necesidad concreta.
-        </p>
-        <p>
-          La asignatura forma parte de un <strong>proyecto tecnológico interdisciplinario</strong>
-          articulado con las demás modalidades del 7mo año,
-          combinando análisis de requerimientos, fases del proyecto, estudio de viabilidad,
-          diseño UX/HCI, OKRs y planificación económica.
-        </p>
-        <p>
-          Cada equipo trabaja sobre un caso de uso propio. En esta edición,
-          dos casos de estudio modelan el recorrido completo: Roberto y Valeria.
-        </p>
-      </div>
-      <div class="cb-stats">
-        <div class="cb-stat"><div class="cb-num">6</div><div class="cb-desc">Fases del proyecto</div></div>
-        <div class="cb-stat"><div class="cb-num">2</div><div class="cb-desc">Casos de uso reales</div></div>
-        <div class="cb-stat"><div class="cb-num">4</div><div class="cb-desc">Módulos de contenido</div></div>
-        <div class="cb-stat"><div class="cb-num">12</div><div class="cb-desc">Proyectos finalizados</div></div>
-      </div>
-    </div>
-
-    <!-- Columna derecha: fases del proyecto -->
-    <div>
-      <div class="cb-label">Las 6 fases del proyecto</div>
-      <div class="phase-list">
-
-        <div class="phase-row">
-          <div class="phase-n">E01</div>
-          <div>
-            <div class="phase-title">Validación del problema</div>
-            <div class="phase-desc">Usuario real · entrevista estructurada · diagnóstico</div>
-          </div>
-        </div>
-
-        <div class="phase-row">
-          <div class="phase-n">E02</div>
-          <div>
-            <div class="phase-title">Estudio de Factibilidad</div>
-            <div class="phase-desc">Técnica · gestión · económica · benchmarking</div>
-          </div>
-        </div>
-
-        <div class="phase-row">
-          <div class="phase-n">E03</div>
-          <div>
-            <div class="phase-title">Diseño del sistema</div>
-            <div class="phase-desc">Requerimientos RF/RNF · OKRs · perfiles de usuario</div>
-          </div>
-        </div>
-
-        <div class="phase-row">
-          <div class="phase-n">E04</div>
-          <div>
-            <div class="phase-title">Prototipado HCI</div>
-            <div class="phase-desc">Mockup Figma · accesibilidad · validación con usuario</div>
-          </div>
-        </div>
-
-        <div class="phase-row">
-          <div class="phase-n">E05</div>
-          <div>
-            <div class="phase-title">Desarrollo</div>
-            <div class="phase-desc">Implementación · repositorio GitHub · landing page</div>
-          </div>
-        </div>
-
-        <div class="phase-row">
-          <div class="phase-n">E06</div>
-          <div>
-            <div class="phase-title">Presentación final</div>
-            <div class="phase-desc">PPT · defensa oral · entrega de carpeta de proyecto</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
+<section id="contexto" class="section" aria-labelledby="ctx-title">
+  <div class="sec-head">
+    <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>¿De qué trata esta asignatura?</p>
+    <h2 id="ctx-title" class="sec-title">Proyectos que nacen de un problema real</h2>
   </div>
-</div>
+
+  <p class="statement" data-reveal>
+    Evaluación de Proyectos enseña a transformar un problema detectado en un cliente real
+    en un sistema tecnológico funcional, viable y presentable. No se trabaja sobre supuestos:
+    el punto de partida es siempre un usuario concreto con una necesidad concreta.
+  </p>
+
+  <div class="bento ctx-bento">
+    <article class="card ctx-card ctx-wide">
+      <p class="card-kicker">Proyecto interdisciplinario</p>
+      <h3 class="card-title">Articulado con todas las modalidades del 7mo año</h3>
+      <p class="card-text">
+        La asignatura forma parte de un <strong>proyecto tecnológico interdisciplinario</strong>,
+        combinando análisis de requerimientos, fases del proyecto, estudio de viabilidad,
+        diseño UX/HCI, OKRs y planificación económica.
+      </p>
+      <p class="card-text">
+        Cada equipo trabaja sobre un caso de uso propio. En esta edición,
+        dos casos de estudio modelan el recorrido completo: Roberto y Valeria.
+      </p>
+      <ul class="pill-row" aria-label="Contenidos que integra">
+        <li>Requerimientos</li><li>Viabilidad</li><li>UX / HCI</li><li>OKRs</li><li>Planificación económica</li>
+      </ul>
+    </article>
+
+    <div class="stat-grid">
+      <div class="card stat cb-stat"><div class="stat-num">6</div><div class="stat-label">Fases del proyecto</div></div>
+      <div class="card stat cb-stat"><div class="stat-num">2</div><div class="stat-label">Casos de uso reales</div></div>
+      <div class="card stat cb-stat"><div class="stat-num">4</div><div class="stat-label">Módulos de contenido</div></div>
+      <div class="card stat cb-stat stat-hl"><div class="stat-num">12</div><div class="stat-label">Proyectos finalizados</div></div>
+    </div>
+  </div>
+
+  <!-- Fases: cronograma tipo GANTT (las barras son decorativas, muestran la secuencia) -->
+  <div class="phases">
+    <div class="phases-copy">
+      <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Las 6 fases del proyecto</p>
+      <h3 class="phases-title">Seis fases, un solo método</h3>
+      <p class="phases-sub">De la entrevista con el usuario real a la defensa oral. Cada fase deja un entregable que valida la siguiente.</p>
+    </div>
+    <div class="roadmap">
+      <div class="rm-head" aria-hidden="true">
+        <span class="rm-title"><svg class="ic"><use href="#i-gantt"/></svg>Cronograma del proyecto</span>
+        <span class="rm-scale"><span>Inicio</span><span>Factibilidad</span><span>Desarrollo</span><span>Cierre</span></span>
+      </div>
+      <ol class="phase-list">
+        <li class="phase-row" style="--s:0;--e:20"><span class="phase-n">E01</span><span class="phase-text"><span class="phase-title">Validación del problema</span><span class="phase-desc">Usuario real · entrevista estructurada · diagnóstico</span></span><span class="phase-track" aria-hidden="true"><i></i></span></li>
+        <li class="phase-row" style="--s:16;--e:36"><span class="phase-n">E02</span><span class="phase-text"><span class="phase-title">Estudio de Factibilidad</span><span class="phase-desc">Técnica · gestión · económica · benchmarking</span></span><span class="phase-track" aria-hidden="true"><i></i></span></li>
+        <li class="phase-row" style="--s:32;--e:52"><span class="phase-n">E03</span><span class="phase-text"><span class="phase-title">Diseño del sistema</span><span class="phase-desc">Requerimientos RF/RNF · OKRs · perfiles de usuario</span></span><span class="phase-track" aria-hidden="true"><i></i></span></li>
+        <li class="phase-row" style="--s:46;--e:68"><span class="phase-n">E04</span><span class="phase-text"><span class="phase-title">Prototipado HCI</span><span class="phase-desc">Mockup Figma · accesibilidad · validación con usuario</span></span><span class="phase-track" aria-hidden="true"><i></i></span></li>
+        <li class="phase-row" style="--s:62;--e:90"><span class="phase-n">E05</span><span class="phase-text"><span class="phase-title">Desarrollo</span><span class="phase-desc">Implementación · repositorio GitHub · landing page</span></span><span class="phase-track" aria-hidden="true"><i></i></span></li>
+        <li class="phase-row is-milestone" style="--s:88;--e:100"><span class="phase-n">E06</span><span class="phase-text"><span class="phase-title">Presentación final</span><span class="phase-desc">PPT · defensa oral · entrega de carpeta de proyecto</span></span><span class="phase-track" aria-hidden="true"><i></i></span></li>
+      </ol>
+    </div>
+  </div>
+</section>
 
 <!-- ════════════════════════════════════════
      CASOS DE USO
      ════════════════════════════════════════ -->
-<section id="casos">
-  <div class="sec-label">Casos de estudio</div>
-  <h2 class="sec-title">Dos problemas reales. Una metodología.</h2>
-  <p class="sec-desc">
-    Cada caso parte de un usuario con un problema concreto. El equipo relevó la situación actual,
-    identificó síntomas y causas raíz, y construyó el sistema desde cero.
-    Seguí el caso que más te interese.
-  </p>
+<section id="casos" class="section" aria-labelledby="casos-title">
+  <div class="sec-head center">
+    <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Casos de estudio</p>
+    <h2 id="casos-title" class="sec-title">Dos problemas reales, una metodología</h2>
+    <p class="sec-desc">
+      Cada caso parte de un usuario con un problema concreto. El equipo relevó la situación actual,
+      identificó síntomas y causas raíz, y construyó el sistema desde cero.
+      Seguí el caso que más te interese.
+    </p>
+  </div>
 
   <div class="casos-grid">
 
     <!-- CASO 01 — ROBERTO -->
-    <div class="caso-card">
-      <div class="cc-header roberto">
-        <div class="cc-num">Caso 01</div>
+    <article class="caso-card is-violet" aria-labelledby="caso1-name">
+      <div class="cc-header">
+        <p class="cc-num">Caso 01</p>
         <div class="cc-avatar-row">
-          <div class="cc-avatar">RF</div>
+          <div class="cc-avatar" aria-hidden="true">RF</div>
           <div>
-            <div class="cc-name">Roberto Fernández</div>
-            <div class="cc-role">Dueño · Ferretería El Tornillo · Villa Bosch, Tres de Febrero</div>
+            <h3 class="cc-name" id="caso1-name">Roberto Fernández</h3>
+            <p class="cc-role">Dueño · Ferretería El Tornillo · Villa Bosch, Tres de Febrero</p>
           </div>
         </div>
-        <div class="cc-tag">🔧 Comercio de barrio · Gestión de stock</div>
+        <p class="cc-tag"><svg class="ic" aria-hidden="true"><use href="#i-wrench"/></svg>Comercio de barrio · Gestión de stock</p>
       </div>
       <div class="cc-body">
         <p class="cc-desc">
@@ -230,32 +271,32 @@
           Trabaja con Excel desactualizado y papel. El equipo detectó tres síntomas
           y trazó las causas raíz para diseñar un sistema de gestión a medida.
         </p>
-        <div class="cc-datos">
-          <div class="cc-dato"><span class="cc-dato-k">Edad</span><span class="cc-dato-v">58 años</span></div>
-          <div class="cc-dato"><span class="cc-dato-k">Negocio</span><span class="cc-dato-v">Ferretería de barrio, 80m², 22 años</span></div>
-          <div class="cc-dato"><span class="cc-dato-k">Sistema actual</span><span class="cc-dato-v warn">Excel desactualizado + papel</span></div>
-          <div class="cc-dato"><span class="cc-dato-k">Problema raíz</span><span class="cc-dato-v warn">Sin sistema de stock ni historial de ventas</span></div>
-          <div class="cc-dato"><span class="cc-dato-k">Presencia digital</span><span class="cc-dato-v">Facebook desactualizado · Google Maps 4.2★</span></div>
-        </div>
+        <dl class="cc-datos">
+          <div class="cc-dato"><dt>Edad</dt><dd>58 años</dd></div>
+          <div class="cc-dato"><dt>Negocio</dt><dd>Ferretería de barrio, 80m², 22 años</dd></div>
+          <div class="cc-dato"><dt>Sistema actual</dt><dd class="warn">Excel desactualizado + papel</dd></div>
+          <div class="cc-dato"><dt>Problema raíz</dt><dd class="warn">Sin sistema de stock ni historial de ventas</dd></div>
+          <div class="cc-dato"><dt>Presencia digital</dt><dd>Facebook desactualizado · Google Maps 4.2★</dd></div>
+        </dl>
         <div class="cc-actions">
-          <a href="https://lpedaci.github.io/ev_proy-modulo02-caso01/"        target="_blank" rel="noopener" class="btn-sm-accent">Ver caso completo →</a>
-          <a href="https://lpedaci.github.io/ev_proy-modulo02-caso01-slides/" target="_blank" rel="noopener" class="btn-sm-out">📊 Ver presentación PPT</a>
+          <a href="https://lpedaci.github.io/ev_proy-modulo02-caso01-slides/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><svg class="ic" aria-hidden="true"><use href="#i-slides"/></svg>Ver presentación PPT</a>
+          <a href="https://lpedaci.github.io/ev_proy-modulo02-caso01/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ver caso completo <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
-    </div>
+    </article>
 
     <!-- CASO 02 — VALERIA -->
-    <div class="caso-card">
-      <div class="cc-header valeria">
-        <div class="cc-num">Caso 02</div>
+    <article class="caso-card is-green" aria-labelledby="caso2-name">
+      <div class="cc-header">
+        <p class="cc-num">Caso 02</p>
         <div class="cc-avatar-row">
-          <div class="cc-avatar">VG</div>
+          <div class="cc-avatar" aria-hidden="true">VG</div>
           <div>
-            <div class="cc-name">Valeria Gómez</div>
-            <div class="cc-role">Socia administradora · Estudio Contable Gómez · Caseros, Tres de Febrero</div>
+            <h3 class="cc-name" id="caso2-name">Valeria Gómez</h3>
+            <p class="cc-role">Socia administradora · Estudio Contable Gómez · Caseros, Tres de Febrero</p>
           </div>
         </div>
-        <div class="cc-tag">🌡️ Hardware + Software · Monitoreo ambiental</div>
+        <p class="cc-tag"><svg class="ic" aria-hidden="true"><use href="#i-sensor"/></svg>Hardware + Software · Monitoreo ambiental</p>
       </div>
       <div class="cc-body">
         <p class="cc-desc">
@@ -265,50 +306,50 @@
           El equipo diseñó <strong>SensorOffice</strong>: una red de sensores con dashboard
           web y control remoto vía SmartThings.
         </p>
-        <div class="cc-datos">
-          <div class="cc-dato"><span class="cc-dato-k">Organización</span><span class="cc-dato-v">Estudio contable · 3 oficinas · 8 empleados + 2 socios</span></div>
-          <div class="cc-dato"><span class="cc-dato-k">Solución</span><span class="cc-dato-v">SensorOffice — red de sensores ambientales</span></div>
-          <div class="cc-dato"><span class="cc-dato-k">Sistema actual</span><span class="cc-dato-v warn">Sin monitoreo · decisiones sin datos</span></div>
-          <div class="cc-dato"><span class="cc-dato-k">Problema raíz</span><span class="cc-dato-v warn">Consumo eléctrico sin control · calidad del aire no medida</span></div>
-          <div class="cc-dato"><span class="cc-dato-k">Tipo de proyecto</span><span class="cc-dato-v">Hardware (sensores) + Software (dashboard + alertas)</span></div>
-        </div>
+        <dl class="cc-datos">
+          <div class="cc-dato"><dt>Organización</dt><dd>Estudio contable · 3 oficinas · 8 empleados + 2 socios</dd></div>
+          <div class="cc-dato"><dt>Solución</dt><dd>SensorOffice — red de sensores ambientales</dd></div>
+          <div class="cc-dato"><dt>Sistema actual</dt><dd class="warn">Sin monitoreo · decisiones sin datos</dd></div>
+          <div class="cc-dato"><dt>Problema raíz</dt><dd class="warn">Consumo eléctrico sin control · calidad del aire no medida</dd></div>
+          <div class="cc-dato"><dt>Tipo de proyecto</dt><dd>Hardware (sensores) + Software (dashboard + alertas)</dd></div>
+        </dl>
         <div class="cc-actions">
-          <a href="https://lpedaci.github.io/ev_proy-modulo02-caso02/"        target="_blank" rel="noopener" class="btn-sm-green">Ver caso completo →</a>
-          <a href="https://lpedaci.github.io/ev_proy-modulo02-caso02-slides/" target="_blank" rel="noopener" class="btn-sm-out">📊 Ver presentación PPT</a>
+          <a href="https://lpedaci.github.io/ev_proy-modulo02-caso02-slides/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><svg class="ic" aria-hidden="true"><use href="#i-slides"/></svg>Ver presentación PPT</a>
+          <a href="https://lpedaci.github.io/ev_proy-modulo02-caso02/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ver caso completo <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
-    </div>
+    </article>
 
   </div>
 
   <!-- NOTA METODOLÓGICA -->
-  <div class="nota-met">
-    <div class="nota-met-icon">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.5.4.85.98.9 1.6h5.4c.05-.62.4-1.2.9-1.6A6 6 0 0 0 12 3z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </div>
+  <aside class="nota-met" aria-labelledby="nota-title">
+    <div class="nota-met-icon" aria-hidden="true"><svg class="ic"><use href="#i-bulb"/></svg></div>
     <div>
-      <div class="nota-met-title">Principio fundamental de la asignatura</div>
-      <div class="nota-met-body">
+      <h3 class="nota-met-title" id="nota-title">Principio fundamental de la asignatura</h3>
+      <p class="nota-met-body">
         Antes de escribir una sola línea de código, el equipo realiza un relevamiento exhaustivo mediante entrevistas estructuradas
         para diagnosticar la situación actual del cliente. <strong>Definición incorrecta → solución incorrecta.</strong>
         El usuario real es citado en etapas clave del proyecto para validar el avance.
-      </div>
+      </p>
     </div>
-  </div>
+  </aside>
 </section>
-
-<div class="divider"></div>
 
 <!-- ════════════════════════════════════════
      PROYECTOS 2026
      ════════════════════════════════════════ -->
-<section id="proyectos">
-  <div class="sec-label">Proyectos del ciclo</div>
-  <h2 class="sec-title">Proyectos finalizados 2026</h2>
-  <p class="sec-desc">
-    Doce equipos de 7mo INFO A y 7mo INFO B llevaron un problema real de un cliente
-    hasta un sistema funcionando, documentado y con su landing de presentación.
-  </p>
+<section id="proyectos" class="section" aria-labelledby="proy-title">
+  <div class="sec-head split">
+    <div>
+      <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Proyectos del ciclo</p>
+      <h2 id="proy-title" class="sec-title">Proyectos finalizados 2026</h2>
+    </div>
+    <p class="sec-desc">
+      Doce equipos de 7mo INFO A y 7mo INFO B llevaron un problema real de un cliente
+      hasta un sistema funcionando, documentado y con su landing de presentación.
+    </p>
+  </div>
 
   <div class="proy-toolbar">
     <div class="proy-filtros" role="group" aria-label="Filtrar proyectos por curso">
@@ -319,224 +360,197 @@
     <p class="proy-count" id="proyCount" aria-live="polite">Mostrando 12 proyectos</p>
   </div>
 
-  <!-- Tarjetas generadas desde assets/js/proyectos-data.js -->
-  <div class="proy-grid" id="proyGrid"></div>
+  <!-- Carrusel: tarjetas generadas desde assets/js/proyectos-data.js -->
+  <div class="carousel" role="region" aria-roledescription="carrusel" aria-label="Proyectos finalizados 2026">
+    <div class="proy-grid" id="proyGrid"></div>
+    <div class="carousel-foot">
+      <div class="carousel-progress" aria-hidden="true"><i id="proyBar"></i></div>
+      <div class="carousel-nav">
+        <button type="button" class="carousel-btn" id="proyPrev" aria-label="Ver proyectos anteriores" aria-controls="proyGrid"><svg class="ic" aria-hidden="true"><use href="#i-chevron-l"/></svg></button>
+        <button type="button" class="carousel-btn" id="proyNext" aria-label="Ver proyectos siguientes" aria-controls="proyGrid"><svg class="ic" aria-hidden="true"><use href="#i-chevron-r"/></svg></button>
+      </div>
+    </div>
+  </div>
 </section>
-
-<div class="divider"></div>
 
 <!-- ════════════════════════════════════════
      METODOLOGÍA
      ════════════════════════════════════════ -->
-<section id="metodologia">
-  <div class="sec-label">¿Cómo trabajamos?</div>
-  <h2 class="sec-title">El método detrás del proyecto</h2>
-  <p class="sec-desc">
-    La asignatura integra herramientas concretas de gestión, diseño y desarrollo
-    que los alumnos aplican en su propio proyecto.
-  </p>
+<section id="metodologia" class="section" aria-labelledby="metod-title">
+  <div class="sec-head center">
+    <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>¿Cómo trabajamos?</p>
+    <h2 id="metod-title" class="sec-title">El método detrás del proyecto</h2>
+    <p class="sec-desc">
+      La asignatura integra herramientas concretas de gestión, diseño y desarrollo
+      que los alumnos aplican en su propio proyecto.
+    </p>
+  </div>
   <div class="metod-grid">
-    <div class="metod-card">
-      <div class="metod-n">01</div>
-      <div class="metod-title">Usuario real como punto de partida</div>
-      <div class="metod-desc">No se admiten proyectos hipotéticos. El cliente es una persona concreta, entrevistada por el equipo, que valida el avance en etapas definidas.</div>
-    </div>
-    <div class="metod-card">
-      <div class="metod-n">02</div>
-      <div class="metod-title">Entrevista estructurada y análisis</div>
-      <div class="metod-desc">Se aplica un formulario de relevamiento para distinguir síntomas de causas raíz. Definición incorrecta = solución incorrecta.</div>
-    </div>
-    <div class="metod-card">
-      <div class="metod-n">03</div>
-      <div class="metod-title">Viabilidad técnica, gestión y económica</div>
-      <div class="metod-desc">Antes de diseñar se analiza si el proyecto es realizable, organizable y rentable. El benchmarking determina la competitividad.</div>
-    </div>
-    <div class="metod-card">
-      <div class="metod-n">04</div>
-      <div class="metod-title">OKRs y requerimientos medibles</div>
-      <div class="metod-desc">Los objetivos se expresan con resultados clave cuantificables. Los RF y RNF son verificables y aceptados por el cliente.</div>
-    </div>
-    <div class="metod-card">
-      <div class="metod-n">05</div>
-      <div class="metod-title">Diseño HCI y prototipado</div>
-      <div class="metod-desc">El mockup en Figma se valida con el usuario antes de desarrollar. Accesibilidad, fuentes y contraste son requisitos no negociables.</div>
-    </div>
-    <div class="metod-card">
-      <div class="metod-n">06</div>
-      <div class="metod-title">Documentación y entrega completa</div>
-      <div class="metod-desc">Carpeta de proyecto, GitHub, landing page y PPT de presentación. El producto debe estar publicado en servidor real, no en localhost.</div>
-    </div>
+    <article class="card metod-card">
+      <div class="metod-top"><span class="metod-icon" aria-hidden="true"><svg class="ic"><use href="#i-user"/></svg></span><span class="metod-n">01</span></div>
+      <h3 class="metod-title">Usuario real como punto de partida</h3>
+      <p class="metod-desc">No se admiten proyectos hipotéticos. El cliente es una persona concreta, entrevistada por el equipo, que valida el avance en etapas definidas.</p>
+    </article>
+    <article class="card metod-card">
+      <div class="metod-top"><span class="metod-icon" aria-hidden="true"><svg class="ic"><use href="#i-chat"/></svg></span><span class="metod-n">02</span></div>
+      <h3 class="metod-title">Entrevista estructurada y análisis</h3>
+      <p class="metod-desc">Se aplica un formulario de relevamiento para distinguir síntomas de causas raíz. Definición incorrecta = solución incorrecta.</p>
+    </article>
+    <article class="card metod-card">
+      <div class="metod-top"><span class="metod-icon" aria-hidden="true"><svg class="ic"><use href="#i-scale"/></svg></span><span class="metod-n">03</span></div>
+      <h3 class="metod-title">Viabilidad técnica, gestión y económica</h3>
+      <p class="metod-desc">Antes de diseñar se analiza si el proyecto es realizable, organizable y rentable. El benchmarking determina la competitividad.</p>
+    </article>
+    <article class="card metod-card">
+      <div class="metod-top"><span class="metod-icon" aria-hidden="true"><svg class="ic"><use href="#i-target"/></svg></span><span class="metod-n">04</span></div>
+      <h3 class="metod-title">OKRs y requerimientos medibles</h3>
+      <p class="metod-desc">Los objetivos se expresan con resultados clave cuantificables. Los RF y RNF son verificables y aceptados por el cliente.</p>
+    </article>
+    <article class="card metod-card">
+      <div class="metod-top"><span class="metod-icon" aria-hidden="true"><svg class="ic"><use href="#i-layout"/></svg></span><span class="metod-n">05</span></div>
+      <h3 class="metod-title">Diseño HCI y prototipado</h3>
+      <p class="metod-desc">El mockup en Figma se valida con el usuario antes de desarrollar. Accesibilidad, fuentes y contraste son requisitos no negociables.</p>
+    </article>
+    <article class="card metod-card">
+      <div class="metod-top"><span class="metod-icon" aria-hidden="true"><svg class="ic"><use href="#i-package"/></svg></span><span class="metod-n">06</span></div>
+      <h3 class="metod-title">Documentación y entrega completa</h3>
+      <p class="metod-desc">Carpeta de proyecto, GitHub, landing page y PPT de presentación. El producto debe estar publicado en servidor real, no en localhost.</p>
+    </article>
   </div>
 </section>
-
-<div class="divider"></div>
 
 <!-- ════════════════════════════════════════
      MATERIALES
      ════════════════════════════════════════ -->
-<section id="materiales">
-  <div class="sec-label">Contenido de la asignatura</div>
-  <h2 class="sec-title">Materiales de estudio</h2>
-  <p class="sec-desc">
-    Los módulos de contenido del programa junto con las herramientas de planificación
-    y las pautas de entrega del ciclo en curso.
-  </p>
+<section id="materiales" class="section" aria-labelledby="mat-title">
+  <div class="sec-head center">
+    <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Contenido de la asignatura</p>
+    <h2 id="mat-title" class="sec-title">Empezá más cerca de la entrega con los materiales de estudio</h2>
+    <p class="sec-desc">
+      Los módulos de contenido del programa junto con las herramientas de planificación
+      y las pautas de entrega del ciclo en curso.
+    </p>
+  </div>
 
-  <div class="materiales-grid">
+  <div class="mat-modules">
+    <article class="card mat-card mat-mod-card">
+      <span class="mat-icon" aria-hidden="true"><svg class="ic"><use href="#i-file"/></svg></span>
+      <p class="mat-mod">Módulo 01</p>
+      <h3 class="mat-title">El Proyecto y sus generalidades</h3>
+      <p class="mat-desc">Dirección de proyectos, ciclo de vida, organigrama, relevamiento y análisis de la organización. Marco conceptual base de la asignatura.</p>
+      <a href="https://drive.google.com/file/d/1ul9F-vKW77T63wKry9XCBVUl9ket7qBd/view" target="_blank" rel="noopener" class="mat-link">Abrir en Drive <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg><span class="sr-only"> (Módulo 01, se abre en una pestaña nueva)</span></a>
+    </article>
+    <article class="card mat-card mat-mod-card">
+      <span class="mat-icon" aria-hidden="true"><svg class="ic"><use href="#i-compass"/></svg></span>
+      <p class="mat-mod">Módulo 02</p>
+      <h3 class="mat-title">Fases de un Proyecto</h3>
+      <p class="mat-desc">Inicio y definición del problema, estudio de viabilidad, benchmarking, planificación, entrevistas, requerimientos y cierre. Corazón metodológico del proyecto.</p>
+      <a href="https://drive.google.com/file/d/1pR9LyNOrX8V4IBVlAuqHKMiKhZ0QZ2Gv/view" target="_blank" rel="noopener" class="mat-link">Abrir en Drive <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg><span class="sr-only"> (Módulo 02, se abre en una pestaña nueva)</span></a>
+    </article>
+    <article class="card mat-card mat-mod-card">
+      <span class="mat-icon" aria-hidden="true"><svg class="ic"><use href="#i-folder"/></svg></span>
+      <p class="mat-mod">Módulo 03</p>
+      <h3 class="mat-title">Documentación del Proyecto</h3>
+      <p class="mat-desc">Estructura de la carpeta de proyecto: control de cambios, alcance, perfiles, restricciones, GANTT, estimación económica y contratos.</p>
+      <a href="https://drive.google.com/file/d/1N9A3jMoAGUjQSZqKv4pl0DRSGOJ_dyku/view" target="_blank" rel="noopener" class="mat-link">Abrir en Drive <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg><span class="sr-only"> (Módulo 03, se abre en una pestaña nueva)</span></a>
+    </article>
+  </div>
 
-    <!-- Módulo 01 -->
-    <div class="mat-card">
-      <div class="mat-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6z"/></svg>
-      </div>
+  <div class="mat-extras">
+    <article class="card mat-card mat-row is-warm">
+      <span class="mat-icon" aria-hidden="true"><svg class="ic"><use href="#i-layout"/></svg></span>
       <div class="mat-info">
-        <div class="mat-mod">Módulo 01</div>
-        <div class="mat-title">El Proyecto y sus generalidades</div>
-        <div class="mat-desc">
-          Dirección de proyectos, ciclo de vida, organigrama, relevamiento y análisis de la organización.
-          Marco conceptual base de la asignatura.
-        </div>
-        <a href="https://drive.google.com/file/d/1ul9F-vKW77T63wKry9XCBVUl9ket7qBd/view" target="_blank" rel="noopener" class="mat-link">Abrir en Drive →</a>
+        <p class="mat-mod">Módulo 3.1</p>
+        <h3 class="mat-title">Ejemplo de documentación</h3>
+        <p class="mat-desc">Caso modelo publicado en la web con la carpeta de proyecto completa: sirve de referencia para redactar y organizar la documentación propia.</p>
+        <a href="https://lpedaci.github.io/ev_proy-modulo03-documentacion/" target="_blank" rel="noopener" class="mat-link">Ver ejemplo <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg><span class="sr-only"> (se abre en una pestaña nueva)</span></a>
       </div>
-    </div>
-
-    <!-- Módulo 02 -->
-    <div class="mat-card">
-      <div class="mat-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6z"/></svg>
-      </div>
+    </article>
+    <article class="card mat-card mat-row is-green">
+      <span class="mat-icon" aria-hidden="true"><svg class="ic"><use href="#i-compass"/></svg></span>
       <div class="mat-info">
-        <div class="mat-mod">Módulo 02</div>
-        <div class="mat-title">Fases de un Proyecto</div>
-        <div class="mat-desc">
-          Inicio y definición del problema, estudio de viabilidad, benchmarking, planificación,
-          entrevistas, requerimientos y cierre. Corazón metodológico del proyecto.
-        </div>
-        <a href="https://drive.google.com/file/d/1pR9LyNOrX8V4IBVlAuqHKMiKhZ0QZ2Gv/view" target="_blank" rel="noopener" class="mat-link">Abrir en Drive →</a>
+        <p class="mat-mod">Lineamientos</p>
+        <h3 class="mat-title">Metodologías y criterios de trabajo</h3>
+        <p class="mat-desc">Lineamientos institucionales del proyecto tecnológico interdisciplinario: pautas de entrega, repositorio GitHub, publicación web y requisitos de presentación.</p>
+        <a href="https://drive.google.com/file/d/1wQFX3TDU_nswwqn_srR2zLXDJLCYjLy0/view" target="_blank" rel="noopener" class="mat-link">Abrir en Drive <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg><span class="sr-only"> (Lineamientos, se abre en una pestaña nueva)</span></a>
       </div>
-    </div>
-
-    <!-- Módulo 03 -->
-    <div class="mat-card">
-      <div class="mat-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6z"/></svg>
-      </div>
+    </article>
+    <article class="card mat-card mat-row is-warm">
+      <span class="mat-icon" aria-hidden="true"><svg class="ic"><use href="#i-gantt"/></svg></span>
       <div class="mat-info">
-        <div class="mat-mod">Módulo 03</div>
-        <div class="mat-title">Documentación del Proyecto</div>
-        <div class="mat-desc">
-          Estructura de la carpeta de proyecto: control de cambios, alcance, perfiles,
-          restricciones, GANTT, estimación económica y contratos.
-        </div>
-        <a href="https://drive.google.com/file/d/1N9A3jMoAGUjQSZqKv4pl0DRSGOJ_dyku/view" target="_blank" rel="noopener" class="mat-link">Abrir en Drive →</a>
+        <p class="mat-mod">Planificación</p>
+        <h3 class="mat-title">Cronograma GANTT 2026</h3>
+        <p class="mat-desc">Planilla base para la planificación de los proyectos: hitos, dependencias y seguimiento del avance de cada equipo a lo largo del ciclo lectivo.</p>
+        <a href="https://docs.google.com/spreadsheets/d/10dP-s-iefJMvuQ2EOiV5pMtVPZR1gEK9YoTmoiA9KdU/edit?usp=sharing" target="_blank" rel="noopener" class="mat-link">Abrir en Sheets <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg><span class="sr-only"> (se abre en una pestaña nueva)</span></a>
       </div>
-    </div>
-
-    <!-- Módulo 3.1 — Ejemplo de documentación -->
-    <div class="mat-card warm">
-      <div class="mat-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4zm2 0v2h14V4H5zm0 4v12h14V8H5zm2 2h6v2H7v-2zm0 4h10v2H7v-2z"/></svg>
-      </div>
+    </article>
+    <article class="card mat-card mat-row is-green">
+      <span class="mat-icon" aria-hidden="true"><svg class="ic"><use href="#i-check"/></svg></span>
       <div class="mat-info">
-        <div class="mat-mod">Módulo 3.1</div>
-        <div class="mat-title">Ejemplo de documentación</div>
-        <div class="mat-desc">
-          Caso modelo publicado en la web con la carpeta de proyecto completa:
-          sirve de referencia para redactar y organizar la documentación propia.
-        </div>
-        <a href="https://lpedaci.github.io/ev_proy-modulo03-documentacion/" target="_blank" rel="noopener" class="mat-link">Ver ejemplo →</a>
+        <p class="mat-mod">Entrega</p>
+        <h3 class="mat-title">Pautas de Entrega — 2da Presentación</h3>
+        <p class="mat-desc">Consignas, criterios de evaluación y requisitos para la segunda presentación del proyecto: desarrollo full-stack, mockups validados y documentación.</p>
+        <a href="https://docs.google.com/document/d/1orKODETj6Q1B7qbAWbIYgXlmmxXX1qFfYqrLxmZhojY/edit?usp=sharing" target="_blank" rel="noopener" class="mat-link">Abrir en Docs <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg><span class="sr-only"> (se abre en una pestaña nueva)</span></a>
       </div>
-    </div>
+    </article>
+  </div>
 
-    <!-- Lineamientos -->
-    <div class="mat-card green">
-      <div class="mat-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
-      </div>
-      <div class="mat-info">
-        <div class="mat-mod">Lineamientos</div>
-        <div class="mat-title">Metodologías y criterios de trabajo</div>
-        <div class="mat-desc">
-          Lineamientos institucionales del proyecto tecnológico interdisciplinario:
-          pautas de entrega, repositorio GitHub, publicación web y requisitos de presentación.
-        </div>
-        <a href="https://drive.google.com/file/d/1wQFX3TDU_nswwqn_srR2zLXDJLCYjLy0/view" target="_blank" rel="noopener" class="mat-link">Abrir en Drive →</a>
-      </div>
-    </div>
+  <ul class="pill-row center" aria-label="Temas que cubren los materiales">
+    <li>Ciclo de vida</li><li>Relevamiento</li><li>Benchmarking</li><li>RF / RNF</li><li>GANTT</li><li>Estimación económica</li><li>Contratos</li><li>Control de cambios</li>
+  </ul>
+</section>
 
-    <!-- Cronograma GANTT 2026 -->
-    <div class="mat-card warm">
-      <div class="mat-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5h11v3.2H3zM3 10.4h15v3.2H3zM3 15.8h8v3.2H3z"/></svg>
-      </div>
-      <div class="mat-info">
-        <div class="mat-mod">Planificación</div>
-        <div class="mat-title">Cronograma GANTT 2026</div>
-        <div class="mat-desc">
-          Planilla base para la planificación de los proyectos: hitos, dependencias
-          y seguimiento del avance de cada equipo a lo largo del ciclo lectivo.
-        </div>
-        <a href="https://docs.google.com/spreadsheets/d/10dP-s-iefJMvuQ2EOiV5pMtVPZR1gEK9YoTmoiA9KdU/edit?usp=sharing" target="_blank" rel="noopener" class="mat-link">Abrir en Sheets →</a>
-      </div>
-    </div>
-
-    <!-- Pautas de Entrega — 2da Presentación -->
-    <div class="mat-card green">
-      <div class="mat-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 2a1 1 0 0 0-1 1H6a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2a1 1 0 0 0-1-1H9zm0 2h6v2H9V4zm1.7 13.3l-2.4-2.4 1.4-1.4 1 1 3-3 1.4 1.4-4.4 4.4z"/></svg>
-      </div>
-      <div class="mat-info">
-        <div class="mat-mod">Entrega</div>
-        <div class="mat-title">Pautas de Entrega — 2da Presentación</div>
-        <div class="mat-desc">
-          Consignas, criterios de evaluación y requisitos para la segunda presentación
-          del proyecto: desarrollo full-stack, mockups validados y documentación.
-        </div>
-        <a href="https://docs.google.com/document/d/1orKODETj6Q1B7qbAWbIYgXlmmxXX1qFfYqrLxmZhojY/edit?usp=sharing" target="_blank" rel="noopener" class="mat-link">Abrir en Docs →</a>
-      </div>
-    </div>
-
+<!-- ════════════════════════════════════════
+     CTA FINAL
+     ════════════════════════════════════════ -->
+<section class="final-cta" aria-labelledby="final-title">
+  <h2 id="final-title" class="final-title">Empezá por un problema real <svg class="final-mark" aria-hidden="true"><use href="#i-mark"/></svg></h2>
+  <div class="hero-ctas center">
+    <a href="#proyectos" class="btn btn-ghost">Explorar proyectos 2026</a>
+    <a href="#casos" class="btn btn-primary">Ver los casos de uso <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
   </div>
 </section>
 
-<div class="divider"></div>
+</main>
 
 <!-- ════════════════════════════════════════
      FOOTER
      ════════════════════════════════════════ -->
-<footer>
-  <div class="footer-inner">
-    <div>
-      <div class="footer-brand">Evaluación de <span>Proyectos</span></div>
-      <div class="footer-desc">Material educativo para 7mo Informática 2026. Instituto Leonardo Murialdo. Proyecto Tecnológico Interdisciplinario · Modalidades del 7mo año.</div>
+<footer class="site-footer">
+  <div class="footer-card">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand"><svg class="nav-logo-mark" aria-hidden="true"><use href="#i-mark"/></svg><span>Evaluación de <b>Proyectos</b></span></div>
+        <p class="footer-desc">Material educativo para 7mo Informática 2026 del Instituto Leonardo Murialdo, parte del Proyecto Tecnológico Interdisciplinario de las modalidades del 7mo año.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="fc-casos">
+        <h2 id="fc-casos">Casos de uso</h2>
+        <a href="https://lpedaci.github.io/ev_proy-modulo02-caso01/"        target="_blank" rel="noopener">Caso 01 — Roberto Fernández</a>
+        <a href="https://lpedaci.github.io/ev_proy-modulo02-caso02/"        target="_blank" rel="noopener">Caso 02 — Valeria Gómez</a>
+        <a href="https://lpedaci.github.io/ev_proy-modulo02-caso01-slides/" target="_blank" rel="noopener">PPT Caso 01</a>
+        <a href="https://lpedaci.github.io/ev_proy-modulo02-caso02-slides/" target="_blank" rel="noopener">PPT Caso 02</a>
+        <a href="#proyectos">Proyectos 2026</a>
+      </nav>
+      <nav class="footer-col" aria-labelledby="fc-mat">
+        <h2 id="fc-mat">Materiales</h2>
+        <a href="https://drive.google.com/file/d/1ul9F-vKW77T63wKry9XCBVUl9ket7qBd/view" target="_blank" rel="noopener">Módulo 01 — Generalidades</a>
+        <a href="https://drive.google.com/file/d/1pR9LyNOrX8V4IBVlAuqHKMiKhZ0QZ2Gv/view" target="_blank" rel="noopener">Módulo 02 — Fases</a>
+        <a href="https://drive.google.com/file/d/1N9A3jMoAGUjQSZqKv4pl0DRSGOJ_dyku/view" target="_blank" rel="noopener">Módulo 03 — Documentación</a>
+        <a href="https://drive.google.com/file/d/1wQFX3TDU_nswwqn_srR2zLXDJLCYjLy0/view" target="_blank" rel="noopener">Lineamientos</a>
+        <a href="https://docs.google.com/spreadsheets/d/10dP-s-iefJMvuQ2EOiV5pMtVPZR1gEK9YoTmoiA9KdU/edit?usp=sharing" target="_blank" rel="noopener">Cronograma GANTT 2026</a>
+        <a href="https://docs.google.com/document/d/1orKODETj6Q1B7qbAWbIYgXlmmxXX1qFfYqrLxmZhojY/edit?usp=sharing" target="_blank" rel="noopener">Pautas — 2da Presentación</a>
+      </nav>
     </div>
-    <div class="footer-col">
-      <h4>Casos de uso</h4>
-      <a href="https://lpedaci.github.io/ev_proy-modulo02-caso01/"        target="_blank" rel="noopener">Caso 01 — Roberto Fernández</a>
-      <a href="https://lpedaci.github.io/ev_proy-modulo02-caso02/"        target="_blank" rel="noopener">Caso 02 — Valeria Gómez</a>
-      <a href="https://lpedaci.github.io/ev_proy-modulo02-caso01-slides/" target="_blank" rel="noopener">PPT Caso 01</a>
-      <a href="https://lpedaci.github.io/ev_proy-modulo02-caso02-slides/" target="_blank" rel="noopener">PPT Caso 02</a>
-      <a href="#proyectos">Proyectos 2026</a>
-    </div>
-    <div class="footer-col">
-      <h4>Materiales</h4>
-      <a href="https://drive.google.com/file/d/1ul9F-vKW77T63wKry9XCBVUl9ket7qBd/view" target="_blank" rel="noopener">Módulo 01 — Generalidades</a>
-      <a href="https://drive.google.com/file/d/1pR9LyNOrX8V4IBVlAuqHKMiKhZ0QZ2Gv/view" target="_blank" rel="noopener">Módulo 02 — Fases</a>
-      <a href="https://drive.google.com/file/d/1N9A3jMoAGUjQSZqKv4pl0DRSGOJ_dyku/view" target="_blank" rel="noopener">Módulo 03 — Documentación</a>
-      <a href="https://drive.google.com/file/d/1wQFX3TDU_nswwqn_srR2zLXDJLCYjLy0/view" target="_blank" rel="noopener">Lineamientos</a>
-      <a href="https://docs.google.com/spreadsheets/d/10dP-s-iefJMvuQ2EOiV5pMtVPZR1gEK9YoTmoiA9KdU/edit?usp=sharing" target="_blank" rel="noopener">Cronograma GANTT 2026</a>
-      <a href="https://docs.google.com/document/d/1orKODETj6Q1B7qbAWbIYgXlmmxXX1qFfYqrLxmZhojY/edit?usp=sharing" target="_blank" rel="noopener">Pautas — 2da Presentación</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span class="footer-copy">©2026 Pedaci Lourdes - Derechos reservados</span>
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/in/lourdes-pedaci/" target="_blank" rel="noopener" class="footer-icon-btn" aria-label="LinkedIn">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-      </a>
-      <a href="https://github.com/lpedaci" target="_blank" rel="noopener" class="footer-icon-btn" aria-label="GitHub">
-        <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-      </a>
+    <div class="footer-bottom">
+      <span class="footer-copy">©2026 Pedaci Lourdes - Derechos reservados</span>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/lourdes-pedaci/" target="_blank" rel="noopener" class="footer-icon-btn" aria-label="LinkedIn (se abre en una pestaña nueva)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://github.com/lpedaci" target="_blank" rel="noopener" class="footer-icon-btn" aria-label="GitHub (se abre en una pestaña nueva)">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </footer>

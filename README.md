@@ -50,10 +50,10 @@ ev-proy-hub/
 |---|---|
 | HTML5 semántico | Estructura del documento |
 | CSS3 (custom properties) | Sistema de diseño con tokens, layout Grid/Flex, bento sections |
-| `prefers-color-scheme` | Modo claro/oscuro automático según el sistema |
+| Tema oscuro | Diseño dark-first (bento cards, acento violeta), contrastes AA verificados |
 | JavaScript vanilla (ES6+) | `IntersectionObserver` para scroll-spy de navegación y animaciones de entrada |
 | Accesibilidad | Estados `:focus-visible` y soporte de `prefers-reduced-motion` |
-| Google Fonts — DM Sans | Tipografía principal |
+| Google Fonts — Geist + Geist Mono | Tipografía principal |
 | GitHub Pages | Hosting estático gratuito |
 | JSON estático | Contenido del asistente de FAQ, sin backend ni API |
 
