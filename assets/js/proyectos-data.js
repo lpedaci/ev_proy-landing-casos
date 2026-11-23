@@ -66,22 +66,24 @@ window.PROYECTOS = [
     ]
   },
   {
-    slug: 'datalogger',
-    nombre: 'Datalogger',
-    iniciales: 'DL',
+    slug: 'ecr',
+    nombre: 'ECR',
+    alias: 'Sistema para Estudio Contable',
+    iniciales: 'ECR',
     curso: 'B',
-    rubro: 'INTI · Área de robótica',
-    descripcion: 'Datalogger que registra la temperatura de los sensores de un robot y envía alertas en forma inalámbrica mediante MQTT.',
-    tipo: ['Hardware + Software', 'IoT'],
-    integrantes: ['Puleo', 'Risoli', 'Varilni', 'Dabbah'],
-    landing: 'https://fr2311.github.io/landingDatalogger/',
-    linktree: 'https://linktr.ee/Datalogger',
+    rubro: 'Estudio contable',
+    descripcion: 'Sistema de gestión para un estudio contable con roles y vistas diferenciadas por tipo de usuario.',
+    tipo: ['Software', 'Web'],
+    integrantes: ['Di Menna', 'Ippolito', 'Loureiro', 'Pereyra'],
+    landing: 'https://ecr-landing-page.up.railway.app/',
+    capturaTema: 'dark',   /* la landing tiene versión oscura: se captura con esa */
+    linktree: 'https://linktree-estudiocontable.up.railway.app/',
     links: [
-      { label: 'Demo', url: 'https://fr2311.github.io/datalogger/login.html' },
-      { label: 'Documentación', url: 'https://fr2311.github.io/landingDatalogger/documentacion.html' },
-      { label: 'Manual', url: 'https://fr2311.github.io/landingDatalogger/manual.html' },
-      { label: 'FAQ', url: 'https://fr2311.github.io/landingDatalogger/faq.html' },
-      { label: 'GitHub', url: 'https://github.com/proyectofinal7ano-spec/G2-Datalogger-7mo-IB' }
+      { label: 'Demo', url: 'https://ecr-sistema.up.railway.app/' },
+      { label: 'Documentación', url: 'https://proyecto2026-estudio.github.io/Documentacion/' },
+      { label: 'Manual', url: 'https://proyecto2026-estudio.github.io/DocumentacionEC/Manual_Uso_ECR.pdf' },
+      { label: 'FAQ', url: 'https://proyecto2026-estudio.github.io/Documentacion/#faq' },
+      { label: 'GitHub', url: 'https://github.com/Proyecto2026-estudio/ECR-SISTEMA' }
     ]
   },
   {
@@ -242,24 +244,22 @@ window.PROYECTOS = [
     ]
   },
   {
-    slug: 'ecr',
-    nombre: 'ECR',
-    alias: 'Sistema para Estudio Contable',
-    iniciales: 'ECR',
+    slug: 'datalogger',
+    nombre: 'Datalogger',
+    iniciales: 'DL',
     curso: 'B',
-    rubro: 'Estudio contable',
-    descripcion: 'Sistema de gestión para un estudio contable con roles y vistas diferenciadas por tipo de usuario.',
-    tipo: ['Software', 'Web'],
-    integrantes: ['Di Menna', 'Ippolito', 'Loureiro', 'Pereyra'],
-    landing: 'https://ecr-landing-page.up.railway.app/',
-    capturaTema: 'dark',   /* la landing tiene versión oscura: se captura con esa */
-    linktree: 'https://linktree-estudiocontable.up.railway.app/',
+    rubro: 'INTI · Área de robótica',
+    descripcion: 'Datalogger que registra la temperatura de los sensores de un robot y envía alertas en forma inalámbrica mediante MQTT.',
+    tipo: ['Hardware + Software', 'IoT'],
+    integrantes: ['Puleo', 'Risoli', 'Varilni', 'Dabbah'],
+    landing: 'https://fr2311.github.io/landingDatalogger/',
+    linktree: 'https://linktr.ee/Datalogger',
     links: [
-      { label: 'Demo', url: 'https://ecr-sistema.up.railway.app/' },
-      { label: 'Documentación', url: 'https://proyecto2026-estudio.github.io/Documentacion/' },
-      { label: 'Manual', url: 'https://proyecto2026-estudio.github.io/DocumentacionEC/Manual_Uso_ECR.pdf' },
-      { label: 'FAQ', url: 'https://proyecto2026-estudio.github.io/Documentacion/#faq' },
-      { label: 'GitHub', url: 'https://github.com/Proyecto2026-estudio/ECR-SISTEMA' }
+      { label: 'Demo', url: 'https://fr2311.github.io/datalogger/login.html' },
+      { label: 'Documentación', url: 'https://fr2311.github.io/landingDatalogger/documentacion.html' },
+      { label: 'Manual', url: 'https://fr2311.github.io/landingDatalogger/manual.html' },
+      { label: 'FAQ', url: 'https://fr2311.github.io/landingDatalogger/faq.html' },
+      { label: 'GitHub', url: 'https://github.com/proyectofinal7ano-spec/G2-Datalogger-7mo-IB' }
     ]
   }
 ];
