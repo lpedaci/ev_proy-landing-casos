@@ -209,9 +209,9 @@ preguntar en clase nunca está mal, responder cualquier cosa sí.
 
 ## La burbuja y el logo
 
-La marca de Hopper es un **cerebro de trazo**. Es un SVG en línea dentro de `hopper.js`
+La marca de Hopper es un **globo de diálogo con un destello** (un asistente que responde). Es un SVG en línea dentro de `hopper.js`
 (constante `LOGO`), sin archivo de imagen: hereda el color del contenedor y se ve nítido a 20px
-igual que a 200, en los dos modos. Si se cambia, conviene probarlo a 20px antes que en grande:
+igual que a 200. En este sitio el círculo del logo va en lila claro con el trazo en violeta profundo (`style.css`). Si se cambia, conviene probarlo a 20px antes que en grande:
 a ese tamaño los rellenos con opacidad y los trazos finos se empastan.
 
 Al cargar la página la burbuja aparece como píldora, con el logo y el nombre, para que se

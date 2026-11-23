@@ -67,7 +67,7 @@
           <div class="pc-rubro">${esc(p.rubro)}</div>
           <p class="pc-desc">${esc(p.descripcion)}</p>
           <ul class="pc-tags" aria-label="Tipo de proyecto">${tags}</ul>
-          <p class="pc-team"><span class="pc-team-k">Integrantes:</span> ${p.integrantes.map(esc).join(', ')}</p>
+          ${(p.integrantes || []).length ? `<p class="pc-team"><span class="pc-team-k">Integrantes:</span> ${p.integrantes.map(esc).join(', ')}</p>` : ''}
           <div class="pc-actions">
             ${linktree}
             <a href="${landing}" ${EXT} class="btn-sm-accent" aria-label="${label} de ${nombre} (se abre en una pestaña nueva)">${label} →</a>

@@ -90,6 +90,12 @@
       row.appendChild(track);
       marquee.appendChild(row);
     });
+
+    /* Pausar la animación cuando el marquee no está en pantalla (ahorra CPU/GPU) */
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(([e]) => marquee.classList.toggle('is-off', !e.isIntersecting))
+        .observe(marquee);
+    }
   }
 
   /* ══════════════════════════════════════════

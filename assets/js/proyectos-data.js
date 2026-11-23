@@ -6,9 +6,10 @@
  * - curso: "A" o "B"
  * - links: solo los que tengan URL web pública y funcionando
  * - captura: assets/proyectos/<slug>.webp (si falta, se muestran las iniciales)
+ * - capturaTema: 'dark' para capturar la versión oscura de la landing (opcional)
  */
 window.PROYECTOS = [
-  /* ── 7mo INFO A ── */
+  /* Orden de presentación (carrusel): se alternan 7mo INFO A y 7mo INFO B */
   {
     slug: 'tres-reyes',
     nombre: 'Logística Tres Reyes',
@@ -30,18 +31,19 @@ window.PROYECTOS = [
     ]
   },
   {
-    slug: 'cannon',
-    nombre: 'CANNON',
-    iniciales: 'CA',
-    curso: 'A',
-    rubro: 'Comercio minorista (red de sucursales)',
-    descripcion: 'Seguimiento del desempeño comercial y la experiencia de venta, con encuestas, roles por sucursal y dashboards para detectar necesidades de capacitación.',
+    slug: 'vacunatorio',
+    nombre: 'SGV - Sistema de Gestión de Vacunas',
+    iniciales: 'SGV',
+    curso: 'B',
+    rubro: 'Salud pública · CAPS San José Obrero',
+    descripcion: 'Sistema de gestión de vacunatorio para un centro de atención primaria, con roles y vistas por perfil, pensado para escalar a otros CAPS.',
     tipo: ['Software', 'Web'],
-    integrantes: ['Gonzalez Pacheco', 'Rearte', 'Soto', 'Waisbein'],
-    landing: 'https://proyectocannon.alwaysdata.net/landing/index.html',
+    integrantes: ['Aloia A.', 'Aloia M.', 'Cosimi', 'Dellepiane'],
+    landing: 'https://linktree-production-af90843c.up.railway.app/landing/',
     linktree: null,
     links: [
-      { label: 'Demo', url: 'https://proyectocannon.alwaysdata.net/index.php' }
+      { label: 'Presentación', url: 'https://cosimitomas.github.io/SGV-Presentacion-/' },
+      { label: 'GitHub', url: 'https://github.com/CosimiTomas/SGV' }
     ]
   },
   {
@@ -64,67 +66,6 @@ window.PROYECTOS = [
     ]
   },
   {
-    slug: 'pulso1',
-    nombre: 'Pulso1',
-    iniciales: 'P1',
-    curso: 'A',
-    rubro: 'Gimnasio',
-    descripcion: 'Sistema web para un gimnasio con gestión de alumnos y créditos de clases, con manuales separados para administrador y alumno.',
-    tipo: ['Software', 'Web'],
-    integrantes: ['Bosio', 'Goyechea'],
-    landing: 'https://juanjoybeto.github.io/Pulso-landing/',
-    linktree: 'https://linktr.ee/Pulso1',
-    links: [
-      { label: 'Demo', url: 'https://newlogin.alwaysdata.net/' },
-      { label: 'Documentación', url: 'https://juanjoybeto.github.io/Pulso-documentacion/' },
-      { label: 'Manual admin', url: 'https://newlogin.alwaysdata.net/manual_administrador.html' },
-      { label: 'Manual alumno', url: 'https://newlogin.alwaysdata.net/manual_alumno.html' },
-      { label: 'FAQ', url: 'https://newlogin.alwaysdata.net/faq.html' },
-      { label: 'GitHub', url: 'https://github.com/JuanjoyBeto/Pulso' }
-    ]
-  },
-  {
-    slug: 'altoque',
-    nombre: 'Al.toque',
-    iniciales: 'AT',
-    curso: 'A',
-    rubro: 'Servicios de oficios',
-    descripcion: 'Plataforma que conecta a personas que necesitan un trabajo de oficio con profesionales disponibles.',
-    tipo: ['Software', 'Web'],
-    integrantes: ['Begnes', 'Ledesma', 'Montes', 'Remeeriee', 'Vargas'],
-    landing: 'https://altoque-landing.vercel.app/',
-    linktree: null,
-    links: [
-      { label: 'Demo', url: 'https://al-toque-eta.vercel.app/' },
-      { label: 'Manual', url: 'https://altoque-manual.vercel.app/' },
-      { label: 'FAQ', url: 'https://altoque-faq.vercel.app/' },
-      { label: 'GitHub', url: 'https://github.com/santinovargasdb/AlToque' }
-    ]
-  },
-
-  /* ── 7mo INFO B ── */
-  {
-    slug: 'vacunatorio',
-    nombre: 'Vacunatorio',
-    alias: 'SGV',
-    iniciales: 'SGV',
-    curso: 'B',
-    rubro: 'Salud pública · CAPS San José Obrero',
-    descripcion: 'Sistema de gestión de vacunatorio para un centro de atención primaria, con roles y vistas por perfil, pensado para escalar a otros CAPS.',
-    tipo: ['Software', 'Web'],
-    integrantes: ['Aloia A.', 'Aloia M.', 'Cosimi', 'Dellepiane'],
-    /* La landing y el linktree (linktreesvg.up.railway.app) devuelven 404.
-       Mientras tanto, el botón principal abre la demo y la captura es de la presentación. */
-    landing: 'https://sgv.up.railway.app/',
-    landingLabel: 'Ver demo',
-    captura: 'https://cosimitomas.github.io/SGV-Presentacion-/',
-    linktree: null,
-    links: [
-      { label: 'Presentación', url: 'https://cosimitomas.github.io/SGV-Presentacion-/' },
-      { label: 'GitHub', url: 'https://github.com/CosimiTomas/SGV' }
-    ]
-  },
-  {
     slug: 'datalogger',
     nombre: 'Datalogger',
     iniciales: 'DL',
@@ -141,6 +82,21 @@ window.PROYECTOS = [
       { label: 'Manual', url: 'https://fr2311.github.io/landingDatalogger/manual.html' },
       { label: 'FAQ', url: 'https://fr2311.github.io/landingDatalogger/faq.html' },
       { label: 'GitHub', url: 'https://github.com/proyectofinal7ano-spec/G2-Datalogger-7mo-IB' }
+    ]
+  },
+  {
+    slug: 'cannon',
+    nombre: 'CANNON',
+    iniciales: 'CA',
+    curso: 'A',
+    rubro: 'Comercio minorista (red de sucursales)',
+    descripcion: 'Seguimiento del desempeño comercial y la experiencia de venta, con encuestas, roles por sucursal y dashboards para detectar necesidades de capacitación.',
+    tipo: ['Software', 'Web'],
+    integrantes: ['Gonzalez Pacheco', 'Rearte', 'Soto', 'Waisbein'],
+    landing: 'https://proyectocannon.alwaysdata.net/landing/index.html',
+    linktree: null,
+    links: [
+      { label: 'Demo', url: 'https://proyectocannon.alwaysdata.net/index.php' }
     ]
   },
   {
@@ -164,6 +120,26 @@ window.PROYECTOS = [
     ]
   },
   {
+    slug: 'pulso1',
+    nombre: 'Pulso1',
+    iniciales: 'P1',
+    curso: 'A',
+    rubro: 'Gimnasio',
+    descripcion: 'Sistema web para un gimnasio con gestión de alumnos y créditos de clases, con manuales separados para administrador y alumno.',
+    tipo: ['Software', 'Web'],
+    integrantes: ['Bosio', 'Goyechea'],
+    landing: 'https://juanjoybeto.github.io/Pulso-landing/',
+    linktree: 'https://linktr.ee/Pulso1',
+    links: [
+      { label: 'Demo', url: 'https://newlogin.alwaysdata.net/' },
+      { label: 'Documentación', url: 'https://juanjoybeto.github.io/Pulso-documentacion/' },
+      { label: 'Manual admin', url: 'https://newlogin.alwaysdata.net/manual_administrador.html' },
+      { label: 'Manual alumno', url: 'https://newlogin.alwaysdata.net/manual_alumno.html' },
+      { label: 'FAQ', url: 'https://newlogin.alwaysdata.net/faq.html' },
+      { label: 'GitHub', url: 'https://github.com/JuanjoyBeto/Pulso' }
+    ]
+  },
+  {
     slug: 'telar-cit',
     nombre: 'Automatización de Telar',
     alias: 'CIT',
@@ -180,6 +156,24 @@ window.PROYECTOS = [
       { label: 'Documentación', url: 'https://manfredojuanignacio08-prog.github.io/Documentacion-AutotizaciondeTelar/' },
       { label: 'Manual', url: 'https://manfredojuanignacio08-prog.github.io/Manuales_de_Uso_CIT/' },
       { label: 'GitHub', url: 'https://github.com/manfredojuanignacio08-prog/control_insercion_trama' }
+    ]
+  },
+  {
+    slug: 'altoque',
+    nombre: 'Al.toque',
+    iniciales: 'AT',
+    curso: 'A',
+    rubro: 'Servicios de oficios',
+    descripcion: 'Plataforma que conecta a personas que necesitan un trabajo de oficio con profesionales disponibles.',
+    tipo: ['Software', 'Web'],
+    integrantes: ['Begnes', 'Ledesma', 'Montes', 'Remeeriee', 'Vargas'],
+    landing: 'https://altoque-landing.vercel.app/',
+    linktree: null,
+    links: [
+      { label: 'Demo', url: 'https://al-toque-eta.vercel.app/' },
+      { label: 'Manual', url: 'https://altoque-manual.vercel.app/' },
+      { label: 'FAQ', url: 'https://altoque-faq.vercel.app/' },
+      { label: 'GitHub', url: 'https://github.com/santinovargasdb/AlToque' }
     ]
   },
   {
@@ -200,6 +194,22 @@ window.PROYECTOS = [
     ]
   },
   {
+    slug: 'tandar',
+    nombre: 'TANDAR-CNEA',
+    alias: 'Gestión de turnos experimentales',
+    iniciales: 'TC',
+    curso: 'A',
+    rubro: 'Ciencia y tecnología · CNEA',
+    descripcion: 'Plataforma web que reemplaza la planilla de Excel para solicitar, revisar y aprobar turnos experimentales, con etapas para la línea experimental, Radioprotección y administración.',
+    tipo: ['Software', 'Web'],
+    integrantes: ['Fernandez Lopez', 'Morán'],
+    landing: 'https://lautaro-fernandez6907-byte.github.io/Landingpage/',
+    linktree: null,
+    links: [
+      { label: 'Demo', url: 'https://tandar2026.alwaysdata.net/' }
+    ]
+  },
+  {
     slug: 'stellantis-sga',
     nombre: 'Stellantis · SGA',
     iniciales: 'SGA',
@@ -216,6 +226,22 @@ window.PROYECTOS = [
     ]
   },
   {
+    slug: 'centro-molisano',
+    nombre: 'Centro Molisano Monforte',
+    alias: 'Sistema de Gestión Digital',
+    iniciales: 'CM',
+    curso: 'A',
+    rubro: 'Club social · Villa Bosch',
+    descripcion: 'Sistema de gestión para un club: padrón de socios, carnet digital con QR, cuotas automáticas, pagos con Mercado Pago y reservas de salones.',
+    tipo: ['Software', 'Web'],
+    integrantes: ['Laborde', 'Carmele', 'Damario', 'Alonso J.', 'Alonso L.'],
+    landing: 'https://proyectogrupo123456-cloud.github.io/Centro-Molisano-Conforte-landing-page/',
+    linktree: null,
+    links: [
+      { label: 'Demo', url: 'https://proyectogrupo123456.alwaysdata.net/' }
+    ]
+  },
+  {
     slug: 'ecr',
     nombre: 'ECR',
     alias: 'Sistema para Estudio Contable',
@@ -226,6 +252,7 @@ window.PROYECTOS = [
     tipo: ['Software', 'Web'],
     integrantes: ['Di Menna', 'Ippolito', 'Loureiro', 'Pereyra'],
     landing: 'https://ecr-landing-page.up.railway.app/',
+    capturaTema: 'dark',   /* la landing tiene versión oscura: se captura con esa */
     linktree: 'https://linktree-estudiocontable.up.railway.app/',
     links: [
       { label: 'Demo', url: 'https://ecr-sistema.up.railway.app/' },

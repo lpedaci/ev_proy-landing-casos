@@ -4,7 +4,7 @@
  * Uso (desde la raíz del repo):
  *   npm i                         (una sola vez)
  *   npx playwright install chromium
- *   node scripts/capturas.mjs              → captura los 12 proyectos
+ *   node scripts/capturas.mjs              → captura todos los proyectos
  *   node scripts/capturas.mjs smartrack    → captura solo los slugs indicados
  *
  * Lee las URLs de assets/js/proyectos-data.js (campo `captura` si existe, si no `landing`) y guarda
@@ -40,7 +40,7 @@ const HIDE_CSS = `
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 async function capturar(browser, p) {
-  const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1 });
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1, colorScheme: p.capturaTema || 'light' });
   try {
     await page.goto(p.captura || p.landing, { waitUntil: 'networkidle', timeout: TIMEOUT });
     await page.waitForTimeout(1500);

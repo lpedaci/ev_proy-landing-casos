@@ -88,18 +88,17 @@
     errorCarga: 'No pude cargar las preguntas (data/faq.json). Si abriste el sitio con doble clic sobre el archivo, el navegador bloquea la lectura: probá con un servidor local o con la versión publicada.'
   };
 
-  /* Marca de Hopper: un cerebro de trazo. Es el logo con el que se
-     la identifica en el sitio: va en la burbuja y en la cabecera del
-     panel. SVG en linea, sin archivo de imagen, hereda el color del
-     contenedor y se lee nitido a 20px igual que a 200. */
+  /* Marca de Hopper: globo de diálogo con un destello (asistente que
+     responde). Es el logo con el que se la identifica en el sitio: va
+     en la burbuja y en la cabecera del panel. SVG en linea, sin archivo
+     de imagen, hereda el color del contenedor y se lee nitido a 20px. */
   var LOGO = '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" ' +
     'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" ' +
     'aria-hidden="true" focusable="false">' +
-    '<path d="M16 8.2v18.4"/>' +
-    '<path d="M16 8.2C15 6.2 12.4 5.6 10.7 7 9.1 6.2 7.1 7 6.6 8.8c-1.9.5-3 2.5-2.3 4.4' +
-    '-1.6 1.2-1.7 3.6-.2 5-.6 2 .7 4 2.7 4.4.3 2.1 2.4 3.4 4.4 2.8 1.1 1.7 3.5 1.9 4.8.4"/>' +
-    '<path d="M16 8.2C17 6.2 19.6 5.6 21.3 7c1.6-.8 3.6 0 4.1 1.8 1.9.5 3 2.5 2.3 4.4' +
-    ' 1.6 1.2 1.7 3.6.2 5 .6 2-.7 4-2.7 4.4-.3 2.1-2.4 3.4-4.4 2.8-1.1 1.7-3.5 1.9-4.8.4"/>' +
+    '<path d="M7 7.5h18a2.5 2.5 0 0 1 2.5 2.5v10a2.5 2.5 0 0 1-2.5 2.5H14l-5.5 4.5V22.5H7' +
+    'A2.5 2.5 0 0 1 4.5 20V10A2.5 2.5 0 0 1 7 7.5z"/>' +
+    '<path d="M16 10.6c.4 2.1 1.6 3.3 3.7 3.7-2.1.4-3.3 1.6-3.7 3.7-.4-2.1-1.6-3.3-3.7-3.7' +
+    ' 2.1-.4 3.3-1.6 3.7-3.7z" fill="currentColor" stroke-width="1.2"/>' +
     '</svg>';
 
   /* Palabras que no aportan a la búsqueda. Se descartan de la
