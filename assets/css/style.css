@@ -165,9 +165,10 @@ body::before {
   font-size: 13px; font-weight: 600;
   background: var(--paper-fill); color: var(--ink-fill);
   padding: 9px 16px; border-radius: 100px; min-height: 38px;
-  transition: transform .18s var(--ease), box-shadow .2s;
+  transition: transform .18s var(--ease), box-shadow .2s, background .2s, color .2s;
 }
-.nav-cta:hover { box-shadow: 0 0 0 4px rgba(255,255,255,.12); }
+/* Hover en azul LinkedIn (blanco encima 5.6:1): deja claro a dónde lleva */
+.nav-cta:hover { background: #0a66c2; color: #fff; transform: translateY(-1px); box-shadow: 0 0 0 4px rgba(10,102,194,.25), 0 8px 24px -8px rgba(10,102,194,.6); }
 .nav-cta:active { transform: scale(.96); }
 
 .nav-burger {
