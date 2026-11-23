@@ -31,10 +31,27 @@
       ? `<a href="${esc(p.linktree)}" ${EXT} class="btn-sm-out" aria-label="Linktree de ${nombre} (se abre en una pestaña nueva)">Linktree</a>`
       : '';
 
-    const links = (p.links || []).length
-      ? `<ul class="pc-links" aria-label="Más enlaces de ${nombre}">${p.links.map(l =>
-          `<li><a href="${esc(l.url)}" ${EXT} aria-label="${esc(l.label)} de ${nombre} (se abre en una pestaña nueva)">${esc(l.label)}</a></li>`
-        ).join('')}</ul>`
+    /* Varios manuales ("Manual admin", "Manual alumno"…) se agrupan en "Manuales por rol" */
+    const todos = p.links || [];
+    const manuales = todos.filter(l => /^Manual\s+\S/.test(l.label));
+    const agrupar = manuales.length > 1;
+    const link = (l, texto) =>
+      `<a href="${esc(l.url)}" ${EXT} aria-label="${esc(l.label)} de ${nombre} (se abre en una pestaña nueva)">${esc(texto)}</a>`;
+    const items = [];
+    todos.forEach(l => {
+      if (agrupar && manuales.includes(l)) {
+        if (l !== manuales[0]) return;
+        const roles = manuales.map(m => {
+          const rol = m.label.replace(/^Manual\s+/, '');
+          return link(m, rol.charAt(0).toUpperCase() + rol.slice(1));
+        }).join('');
+        items.push(`<li class="pc-group"><span class="pc-group-k">Manuales por rol:</span>${roles}</li>`);
+      } else {
+        items.push(`<li>${link(l, l.label)}</li>`);
+      }
+    });
+    const links = items.length
+      ? `<ul class="pc-links" aria-label="Más enlaces de ${nombre}">${items.join('')}</ul>`
       : '';
 
     return `
