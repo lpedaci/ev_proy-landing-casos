@@ -1,7 +1,13 @@
 # Evaluación de Proyectos — Hub
 
 **Espacio curricular de 7mo año · Tecnicatura en Informática Personal y Profesional · Ciclo 2026**
+
 Instituto Leonardo Murialdo · Proyecto Tecnológico Interdisciplinario
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=flat-square&logo=githubpages&logoColor=white)
 
 Sitio público de la asignatura **Evaluación de Proyectos**. Reúne en una sola página el método de trabajo, dos casos de estudio modelo, los proyectos finalizados del ciclo y los materiales de cursada, con un asistente de preguntas frecuentes (Hopper).
 Se publica con **GitHub Pages** y no requiere backend.
@@ -155,10 +161,29 @@ Las preguntas y respuestas están en `data/faq.json`. Ver **[HOPPER.md](HOPPER.m
 └── README.md
 ```
 
-## 7. Tecnologías
+## 7. Tecnologías y herramientas
 
-HTML5 semántico · CSS3 (custom properties, Grid, subgrid) · JavaScript vanilla · Google Fonts (Geist, Geist Mono) · GitHub Pages.
-Sin frameworks ni bundlers. Playwright y Sharp se usan solo para generar capturas, no en el sitio publicado.
+**En el sitio publicado**
+
+| | Tecnología | Uso |
+|---|---|---|
+| ![HTML5](https://img.shields.io/badge/-E34F26?style=flat-square&logo=html5&logoColor=white) | **HTML5** | Estructura semántica, landmarks y ARIA |
+| ![CSS3](https://img.shields.io/badge/-1572B6?style=flat-square&logo=css&logoColor=white) | **CSS3** | Tokens (custom properties), Grid, subgrid y responsive |
+| ![JavaScript](https://img.shields.io/badge/-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | **JavaScript** (vanilla) | Carrusel, filtros, menú, franja de proyectos y Hopper |
+| ![JSON](https://img.shields.io/badge/-000000?style=flat-square&logo=json&logoColor=white) | **JSON** | Contenido de Hopper (FAQ y señales) |
+| ![Google Fonts](https://img.shields.io/badge/-4285F4?style=flat-square&logo=googlefonts&logoColor=white) | **Google Fonts** | Tipografías Geist y Geist Mono |
+| ![GitHub Pages](https://img.shields.io/badge/-222222?style=flat-square&logo=githubpages&logoColor=white) | **GitHub Pages** | Hosting estático |
+
+**Solo para mantenimiento** (no se cargan en el sitio)
+
+| | Herramienta | Uso |
+|---|---|---|
+| ![Node.js](https://img.shields.io/badge/-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white) | **Node.js** | Ejecuta el script de capturas |
+| ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square) | **Playwright** | Abre cada landing y toma la captura |
+| ![Sharp](https://img.shields.io/badge/-99CC00?style=flat-square&logo=sharp&logoColor=white) | **Sharp** | Convierte las capturas a WebP |
+| ![Git](https://img.shields.io/badge/-F05032?style=flat-square&logo=git&logoColor=white) | **Git / GitHub** | Versionado y publicación |
+
+Sin frameworks ni bundlers.
 
 ---
 
