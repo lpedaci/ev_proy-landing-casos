@@ -4,7 +4,8 @@
  *
  * Para agregar o corregir un proyecto, editá este array.
  * - curso: "A" o "B"
- * - links: solo los que tengan URL web pública y funcionando
+ * - links: solo los que tengan URL web pública y funcionando.
+ *   No se publican Demo, GitHub ni archivos alojados en github.com (acceso a los sistemas y al código): se cuidan los proyectos.
  * - captura: assets/proyectos/<slug>.webp (si falta, se muestran las iniciales)
  * - capturaTema: 'dark' para capturar la versión oscura de la landing (opcional)
  */
@@ -23,11 +24,8 @@ window.PROYECTOS = [
     landing: 'https://varelajoaquin2007-rgb.github.io/Landing-Page-Tres-Reyes/',
     linktree: 'https://linktr.ee/proyectointermiami',
     links: [
-      { label: 'Demo', url: 'https://tres-reyes-logistica.page.gd/?i=2' },
       { label: 'Documentación', url: 'https://varelajoaquin2007-rgb.github.io/Documentacion_Tres-Reyes/' },
-      { label: 'Manual', url: 'https://github.com/varelajoaquin2007-rgb/BackUp_TresReyes/blob/main/TruckRoute_Manual%20de%20Usuario.pdf' },
-      { label: 'FAQ', url: 'https://varelajoaquin2007-rgb.github.io/FAQs_Tresreyes/' },
-      { label: 'GitHub', url: 'https://github.com/varelajoaquin2007-rgb/BackUp_TresReyes/tree/main' }
+      { label: 'FAQ', url: 'https://varelajoaquin2007-rgb.github.io/FAQs_Tresreyes/' }
     ]
   },
   {
@@ -42,8 +40,7 @@ window.PROYECTOS = [
     landing: 'https://linktree-production-af90843c.up.railway.app/landing/',
     linktree: null,
     links: [
-      { label: 'Presentación', url: 'https://cosimitomas.github.io/SGV-Presentacion-/' },
-      { label: 'GitHub', url: 'https://github.com/CosimiTomas/SGV' }
+      { label: 'Presentación', url: 'https://cosimitomas.github.io/SGV-Presentacion-/' }
     ]
   },
   {
@@ -58,11 +55,8 @@ window.PROYECTOS = [
     landing: 'https://ezemorgado07.github.io/smartrack-landing/',
     linktree: null,
     links: [
-      { label: 'Demo', url: 'https://aucateksmartrack.alwaysdata.net/' },
       { label: 'Documentación', url: 'https://ezemorgado07.github.io/smartrack/smartrack-docs/' },
-      { label: 'Manual', url: 'https://github.com/ezemorgado07/smartrack/blob/main/SmartRACK_Manual_Usuario.pdf' },
-      { label: 'FAQ', url: 'https://ezemorgado07.github.io/faq-smartrack/' },
-      { label: 'GitHub', url: 'https://github.com/ezemorgado07/smartrack' }
+      { label: 'FAQ', url: 'https://ezemorgado07.github.io/faq-smartrack/' }
     ]
   },
   {
@@ -79,11 +73,9 @@ window.PROYECTOS = [
     capturaTema: 'dark',   /* la landing tiene versión oscura: se captura con esa */
     linktree: 'https://linktree-estudiocontable.up.railway.app/',
     links: [
-      { label: 'Demo', url: 'https://ecr-sistema.up.railway.app/' },
       { label: 'Documentación', url: 'https://proyecto2026-estudio.github.io/Documentacion/' },
       { label: 'Manual', url: 'https://proyecto2026-estudio.github.io/DocumentacionEC/Manual_Uso_ECR.pdf' },
-      { label: 'FAQ', url: 'https://proyecto2026-estudio.github.io/Documentacion/#faq' },
-      { label: 'GitHub', url: 'https://github.com/Proyecto2026-estudio/ECR-SISTEMA' }
+      { label: 'FAQ', url: 'https://proyecto2026-estudio.github.io/Documentacion/#faq' }
     ]
   },
   {
@@ -97,9 +89,7 @@ window.PROYECTOS = [
     integrantes: ['Gonzalez Pacheco', 'Rearte', 'Soto', 'Waisbein'],
     landing: 'https://proyectocannon.alwaysdata.net/landing/index.html',
     linktree: null,
-    links: [
-      { label: 'Demo', url: 'https://proyectocannon.alwaysdata.net/index.php' }
-    ]
+    links: []
   },
   {
     slug: 'rutas-eficientes',
@@ -114,11 +104,9 @@ window.PROYECTOS = [
     landing: 'https://nayitoo.github.io/RE-doc/landing/',
     linktree: 'https://rutas-eficientes.taplink.bio/',
     links: [
-      { label: 'Demo', url: 'https://rutas-eficientes.alwaysdata.net/' },
       { label: 'Documentación', url: 'https://nayitoo.github.io/RE-doc/' },
       { label: 'Manual', url: 'https://nayitoo.github.io/RE-doc/manual/' },
-      { label: 'Guía rápida', url: 'https://nayitoo.github.io/RE-doc/quickstart/' },
-      { label: 'GitHub', url: 'https://github.com/Nayitoo/proyecto-final-7mo-rutas-eficientes' }
+      { label: 'Guía rápida', url: 'https://nayitoo.github.io/RE-doc/quickstart/' }
     ]
   },
   {
@@ -133,12 +121,10 @@ window.PROYECTOS = [
     landing: 'https://juanjoybeto.github.io/Pulso-landing/',
     linktree: 'https://linktr.ee/Pulso1',
     links: [
-      { label: 'Demo', url: 'https://newlogin.alwaysdata.net/' },
       { label: 'Documentación', url: 'https://juanjoybeto.github.io/Pulso-documentacion/' },
       { label: 'Manual admin', url: 'https://newlogin.alwaysdata.net/manual_administrador.html' },
       { label: 'Manual alumno', url: 'https://newlogin.alwaysdata.net/manual_alumno.html' },
-      { label: 'FAQ', url: 'https://newlogin.alwaysdata.net/faq.html' },
-      { label: 'GitHub', url: 'https://github.com/JuanjoyBeto/Pulso' }
+      { label: 'FAQ', url: 'https://newlogin.alwaysdata.net/faq.html' }
     ]
   },
   {
@@ -154,10 +140,8 @@ window.PROYECTOS = [
     landing: 'https://manfredojuanignacio08-prog.github.io/Landing_Page_CIT/',
     linktree: 'https://manfredojuanignacio08-prog.github.io/Linktree_CIT/',
     links: [
-      { label: 'Demo', url: 'https://control-trama-backend.onrender.com/' },
       { label: 'Documentación', url: 'https://manfredojuanignacio08-prog.github.io/Documentacion-AutotizaciondeTelar/' },
-      { label: 'Manual', url: 'https://manfredojuanignacio08-prog.github.io/Manuales_de_Uso_CIT/' },
-      { label: 'GitHub', url: 'https://github.com/manfredojuanignacio08-prog/control_insercion_trama' }
+      { label: 'Manual', url: 'https://manfredojuanignacio08-prog.github.io/Manuales_de_Uso_CIT/' }
     ]
   },
   {
@@ -172,10 +156,8 @@ window.PROYECTOS = [
     landing: 'https://altoque-landing.vercel.app/',
     linktree: null,
     links: [
-      { label: 'Demo', url: 'https://al-toque-eta.vercel.app/' },
       { label: 'Manual', url: 'https://altoque-manual.vercel.app/' },
-      { label: 'FAQ', url: 'https://altoque-faq.vercel.app/' },
-      { label: 'GitHub', url: 'https://github.com/santinovargasdb/AlToque' }
+      { label: 'FAQ', url: 'https://altoque-faq.vercel.app/' }
     ]
   },
   {
@@ -207,9 +189,7 @@ window.PROYECTOS = [
     integrantes: ['Fernandez Lopez', 'Morán'],
     landing: 'https://lautaro-fernandez6907-byte.github.io/Landingpage/',
     linktree: null,
-    links: [
-      { label: 'Demo', url: 'https://tandar2026.alwaysdata.net/' }
-    ]
+    links: []
   },
   {
     slug: 'stellantis-sga',
@@ -239,9 +219,7 @@ window.PROYECTOS = [
     integrantes: ['Laborde', 'Carmele', 'Damario', 'Alonso J.', 'Alonso L.'],
     landing: 'https://proyectogrupo123456-cloud.github.io/Centro-Molisano-Conforte-landing-page/',
     linktree: null,
-    links: [
-      { label: 'Demo', url: 'https://proyectogrupo123456.alwaysdata.net/' }
-    ]
+    links: []
   },
   {
     slug: 'datalogger',
@@ -255,11 +233,9 @@ window.PROYECTOS = [
     landing: 'https://fr2311.github.io/landingDatalogger/',
     linktree: 'https://linktr.ee/Datalogger',
     links: [
-      { label: 'Demo', url: 'https://fr2311.github.io/datalogger/login.html' },
       { label: 'Documentación', url: 'https://fr2311.github.io/landingDatalogger/documentacion.html' },
       { label: 'Manual', url: 'https://fr2311.github.io/landingDatalogger/manual.html' },
-      { label: 'FAQ', url: 'https://fr2311.github.io/landingDatalogger/faq.html' },
-      { label: 'GitHub', url: 'https://github.com/proyectofinal7ano-spec/G2-Datalogger-7mo-IB' }
+      { label: 'FAQ', url: 'https://fr2311.github.io/landingDatalogger/faq.html' }
     ]
   }
 ];

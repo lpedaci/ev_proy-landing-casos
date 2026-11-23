@@ -755,6 +755,30 @@ kbd {
   .wb-crumbs span, .wb-crumbs .ic { display: none; }
 }
 
+/* Tablet/mobile y pantallas táctiles: los enlaces de Materiales se ven
+   siempre como botón (sin hover no hay forma de descubrirlos) */
+/* Subgrid (desktop, tablet y mobile): cada fila de las tarjetas (título, texto,
+   integrantes, botón "Ver landing", enlaces) queda a la misma altura en todo el
+   carrusel, aunque una tarjeta no tenga integrantes o enlaces. */
+.proy-grid { grid-template-rows: repeat(9, auto); row-gap: 0; }
+.proy-grid > .proy-card { display: grid; grid-row: span 9; grid-template-rows: subgrid; }
+.proy-card .pc-body { grid-row: span 8; display: grid; grid-template-rows: subgrid; }
+.proy-card .pc-actions { margin-top: 0; align-self: end; }
+.proy-card .pc-title, .proy-card .pc-rubro { align-self: start; }
+.pc-links.is-empty { border-top: 0; padding-top: 0; }
+.pc-team.is-empty { margin-bottom: 1.25rem; }
+
+@media (max-width: 1024px), (hover: none) {
+  .mat-link {
+    margin-left: 0; margin-top: .6rem; min-height: 44px; padding: 0 18px;
+    align-self: stretch; justify-content: center;   /* ancho completo (Material: botones en layouts angostos) */
+    background: rgba(124,92,255,.12); border-color: rgba(164,139,255,.35);
+  }
+  .mat-row.is-warm .mat-link { background: rgba(251,146,60,.1); border-color: rgba(253,186,116,.35); }
+  .mat-row.is-green .mat-link { background: rgba(52,211,153,.1); border-color: rgba(110,231,183,.35); }
+  .mat-mod-card .mat-link { justify-self: stretch; }
+}
+
 @media (max-width: 860px) {
   .sec-head.split { grid-template-columns: 1fr; gap: 0; }
   .sec-head.split .sec-desc { margin-top: 1rem; }
@@ -774,6 +798,8 @@ kbd {
 }
 
 @media (max-width: 600px) {
+  /* Materiales: ícono arriba, texto y botón a todo el ancho */
+  .mat-row { flex-direction: column; gap: .85rem; }
   /* apilado: el primario queda arriba (column-reverse) */
   .hero-ctas { width: 100%; flex-direction: column-reverse; }
   .hero-ctas .btn { width: 100%; }

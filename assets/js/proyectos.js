@@ -27,10 +27,6 @@
     const alias = p.alias ? ` <span class="pc-alias">${esc(p.alias)}</span>` : '';
     const tags  = p.tipo.map(t => `<li>${esc(t)}</li>`).join('');
 
-    const linktree = p.linktree
-      ? `<a href="${esc(p.linktree)}" ${EXT} class="btn-sm-out" aria-label="Linktree de ${nombre} (se abre en una pestaña nueva)">Linktree</a>`
-      : '';
-
     /* Varios manuales ("Manual admin", "Manual alumno"…) se agrupan en "Manuales por rol" */
     const todos = p.links || [];
     const manuales = todos.filter(l => /^Manual\s+\S/.test(l.label));
@@ -50,9 +46,10 @@
         items.push(`<li>${link(l, l.label)}</li>`);
       }
     });
+    /* Sin enlaces extra: hueco vacío para que el botón quede a la misma altura en todas las tarjetas */
     const links = items.length
       ? `<ul class="pc-links" aria-label="Más enlaces de ${nombre}">${items.join('')}</ul>`
-      : '';
+      : '<span class="pc-links is-empty" aria-hidden="true"></span>';
 
     return `
       <article class="proy-card" data-curso="${p.curso}" aria-labelledby="pc-${p.slug}"
@@ -67,9 +64,10 @@
           <div class="pc-rubro">${esc(p.rubro)}</div>
           <p class="pc-desc">${esc(p.descripcion)}</p>
           <ul class="pc-tags" aria-label="Tipo de proyecto">${tags}</ul>
-          ${(p.integrantes || []).length ? `<p class="pc-team"><span class="pc-team-k">Integrantes:</span> ${p.integrantes.map(esc).join(', ')}</p>` : ''}
+          ${(p.integrantes || []).length
+            ? `<p class="pc-team"><span class="pc-team-k">Integrantes:</span> ${p.integrantes.map(esc).join(', ')}</p>`
+            : '<span class="pc-team is-empty" aria-hidden="true"></span>'}
           <div class="pc-actions">
-            ${linktree}
             <a href="${landing}" ${EXT} class="btn-sm-accent" aria-label="${label} de ${nombre} (se abre en una pestaña nueva)">${label} →</a>
           </div>
           ${links}
