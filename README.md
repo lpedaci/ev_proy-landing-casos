@@ -151,6 +151,8 @@ Las preguntas y respuestas están en `data/faq.json`. Ver **[HOPPER.md](HOPPER.m
 │   │   ├── proyectos.js        Tarjetas, filtros y carrusel
 │   │   └── script.js           Menú, nav activo, franja de proyectos, revelados
 │   ├── proyectos/*.webp        Capturas de las landings
+│   ├── favicon.svg / favicon-32.png / apple-touch-icon.png   Ícono del sitio (marca GANTT)
+│   ├── og-card.png             Tarjeta para redes (1200×630, Open Graph / X)
 │   ├── hopper.js / hopper.css  Asistente de FAQ
 ├── data/
 │   ├── faq.json                Contenido de Hopper
